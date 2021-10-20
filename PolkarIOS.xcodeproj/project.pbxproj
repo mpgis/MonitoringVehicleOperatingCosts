@@ -15,9 +15,12 @@
 		3BBBBC9227206BB60099B61B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BBBBC9027206BB60099B61B /* LaunchScreen.storyboard */; };
 		3BF4E2AC2720735100C2F06A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF4E2AB2720735100C2F06A /* LoginViewController.swift */; };
 		3BF4E2AE272073B800C2F06A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF4E2AD272073B800C2F06A /* RegisterViewController.swift */; };
+		3BF4E2B027207AC200C2F06A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BF4E2AF27207AC200C2F06A /* GoogleService-Info.plist */; };
+		BEC59B18FF4FB415A65C5881 /* Pods_PolkarIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30F52062499427EA454A0D4F /* Pods_PolkarIOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30F52062499427EA454A0D4F /* Pods_PolkarIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PolkarIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BBBBC8227206BB50099B61B /* PolkarIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PolkarIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BBBBC8527206BB50099B61B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BBBBC8727206BB50099B61B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +31,9 @@
 		3BBBBC9327206BB60099B61B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BF4E2AB2720735100C2F06A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3BF4E2AD272073B800C2F06A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		3BF4E2AF27207AC200C2F06A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		93ECF18DD70E3EA75A2360C5 /* Pods-PolkarIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolkarIOS.debug.xcconfig"; path = "Target Support Files/Pods-PolkarIOS/Pods-PolkarIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		B98EFB56C9022E7902AEB104 /* Pods-PolkarIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolkarIOS.release.xcconfig"; path = "Target Support Files/Pods-PolkarIOS/Pods-PolkarIOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEC59B18FF4FB415A65C5881 /* Pods_PolkarIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +53,8 @@
 			children = (
 				3BBBBC8427206BB50099B61B /* PolkarIOS */,
 				3BBBBC8327206BB50099B61B /* Products */,
+				7FFF4BAC215F431F2C988DDF /* Pods */,
+				3E53EDE74DBD88E09C375B33 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +76,7 @@
 				3BBBBC8727206BB50099B61B /* SceneDelegate.swift */,
 				3BBBBC8E27206BB60099B61B /* Assets.xcassets */,
 				3BBBBC9027206BB60099B61B /* LaunchScreen.storyboard */,
+				3BF4E2AF27207AC200C2F06A /* GoogleService-Info.plist */,
 				3BBBBC9327206BB60099B61B /* Info.plist */,
 			);
 			path = PolkarIOS;
@@ -97,6 +107,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		3E53EDE74DBD88E09C375B33 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				30F52062499427EA454A0D4F /* Pods_PolkarIOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7FFF4BAC215F431F2C988DDF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				93ECF18DD70E3EA75A2360C5 /* Pods-PolkarIOS.debug.xcconfig */,
+				B98EFB56C9022E7902AEB104 /* Pods-PolkarIOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -104,9 +131,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3BBBBC9627206BB60099B61B /* Build configuration list for PBXNativeTarget "PolkarIOS" */;
 			buildPhases = (
+				78F03F8C45C2A8506C099028 /* [CP] Check Pods Manifest.lock */,
 				3BBBBC7E27206BB50099B61B /* Sources */,
 				3BBBBC7F27206BB50099B61B /* Frameworks */,
 				3BBBBC8027206BB50099B61B /* Resources */,
+				A178622BC12561C2669CDEFA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,12 +185,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BBBBC9227206BB60099B61B /* LaunchScreen.storyboard in Resources */,
+				3BF4E2B027207AC200C2F06A /* GoogleService-Info.plist in Resources */,
 				3BBBBC8F27206BB60099B61B /* Assets.xcassets in Resources */,
 				3BBBBC8D27206BB50099B61B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		78F03F8C45C2A8506C099028 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PolkarIOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A178622BC12561C2669CDEFA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PolkarIOS/Pods-PolkarIOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PolkarIOS/Pods-PolkarIOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PolkarIOS/Pods-PolkarIOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3BBBBC7E27206BB50099B61B /* Sources */ = {
@@ -316,6 +388,7 @@
 		};
 		3BBBBC9727206BB60099B61B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93ECF18DD70E3EA75A2360C5 /* Pods-PolkarIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -344,6 +417,7 @@
 		};
 		3BBBBC9827206BB60099B61B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B98EFB56C9022E7902AEB104 /* Pods-PolkarIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -16,22 +16,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Zalogowano!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ih9-uq-beq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Zalogowano!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ih9-uq-beq">
                                 <rect key="frame" x="158" y="438" width="98" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rns-gW-duY">
+                                <rect key="frame" x="170" y="539" width="76" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="2ZS-su-fQz"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Wyloguj"/>
+                                <connections>
+                                    <action selector="logOutPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aI4-Nj-xnT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rns-gW-duY" secondAttribute="trailing" constant="168" id="KGy-uB-yRV"/>
+                            <constraint firstItem="rns-gW-duY" firstAttribute="top" secondItem="Ih9-uq-beq" secondAttribute="bottom" constant="80" id="LXS-t8-zuZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rns-gW-duY" secondAttribute="bottom" constant="292" id="OQM-cE-RWQ"/>
+                            <constraint firstItem="rns-gW-duY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="170" id="heO-Ax-LBS"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WB6-30-6Ks"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="928.98550724637687" y="97.767857142857139"/>
+            <point key="canvasLocation" x="1080" y="477"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="q5Y-WK-qfj">
@@ -83,6 +99,9 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Zarejestruj" cornerStyle="large"/>
+                                        <connections>
+                                            <action selector="registerPressed:" destination="3tG-dI-9fI" eventType="touchUpInside" id="HYR-xX-Otc"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="LxN-74-VmK"/>
@@ -110,6 +129,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="jRi-xb-qvR"/>
+                    <connections>
+                        <outlet property="loginTextField" destination="JXJ-nd-gEL" id="bNx-mv-7aE"/>
+                        <outlet property="passwordTextField" destination="VKK-5y-GNr" id="8t3-D9-kss"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="RegisterToWelcome" id="j1R-30-Ezj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mw3-6H-PBN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -161,6 +185,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Zaloguj" cornerStyle="large"/>
+                                <connections>
+                                    <action selector="loginPressed:" destination="i92-rq-Hht" eventType="touchUpInside" id="rs2-IQ-ugE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3d0-KM-Fxe">
                                 <rect key="frame" x="150" y="430" width="114" height="50"/>
@@ -200,7 +227,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="RSc-I4-f0f"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" id="TOM-Dx-Zfe"/>
+                        <outlet property="loginTextField" destination="n3r-EJ-zoI" id="5cJ-Da-bpp"/>
+                        <outlet property="passwordTextField" destination="LoK-5L-63t" id="8rH-0F-7lc"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="LoginToWelcome" id="TOM-Dx-Zfe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lBF-a5-BXM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -226,6 +255,9 @@
             <point key="canvasLocation" x="-1057.9710144927537" y="97.767857142857139"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="TOM-Dx-Zfe"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
