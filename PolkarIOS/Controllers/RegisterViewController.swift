@@ -31,4 +31,8 @@ class RegisterViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func loginPressed(_ sender: UIButton) {
+        navigationController?.popToRootViewController(animated: true)
+    }
 }
