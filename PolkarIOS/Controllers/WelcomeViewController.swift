@@ -7,12 +7,20 @@
 
 import UIKit
 import Firebase
+import SideMenu
 
 class WelcomeViewController: UIViewController {
 
+    var menu: SideMenuNavigationController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        menu = SideMenuNavigationController(rootViewController: MenuListController())
+        menu?.leftSide = true
+        
+        SideMenuManager.default.leftMenuNavigationController = menu
+        SideMenuManager.default.addPanGestureToPresent(toView: self.view)
     }
 
     @IBAction func logOutPressed(_ sender: UIButton) {
@@ -26,5 +34,11 @@ class WelcomeViewController: UIViewController {
         }
     }
     
+    @IBAction func didTapMenu(_ sender: UIButton) {
+        present(menu!, animated: true, completion: nil)
+    }
+    
 }
+
+
 

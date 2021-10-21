@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B9A21D5272213D50071CE60 /* MenuListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9A21D4272213D50071CE60 /* MenuListController.swift */; };
+		3B9A21D7272217550071CE60 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9A21D6272217550071CE60 /* HistoryViewController.swift */; };
 		3BBBBC8627206BB50099B61B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBBBC8527206BB50099B61B /* AppDelegate.swift */; };
 		3BBBBC8827206BB50099B61B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBBBC8727206BB50099B61B /* SceneDelegate.swift */; };
 		3BBBBC8A27206BB50099B61B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBBBC8927206BB50099B61B /* WelcomeViewController.swift */; };
@@ -21,6 +23,8 @@
 
 /* Begin PBXFileReference section */
 		30F52062499427EA454A0D4F /* Pods_PolkarIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PolkarIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B9A21D4272213D50071CE60 /* MenuListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListController.swift; sourceTree = "<group>"; };
+		3B9A21D6272217550071CE60 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		3BBBBC8227206BB50099B61B /* PolkarIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PolkarIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BBBBC8527206BB50099B61B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BBBBC8727206BB50099B61B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +92,8 @@
 				3BBBBC8927206BB50099B61B /* WelcomeViewController.swift */,
 				3BF4E2AB2720735100C2F06A /* LoginViewController.swift */,
 				3BF4E2AD272073B800C2F06A /* RegisterViewController.swift */,
+				3B9A21D4272213D50071CE60 /* MenuListController.swift */,
+				3B9A21D6272217550071CE60 /* HistoryViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -244,6 +250,8 @@
 				3BF4E2AE272073B800C2F06A /* RegisterViewController.swift in Sources */,
 				3BBBBC8A27206BB50099B61B /* WelcomeViewController.swift in Sources */,
 				3BBBBC8627206BB50099B61B /* AppDelegate.swift in Sources */,
+				3B9A21D5272213D50071CE60 /* MenuListController.swift in Sources */,
+				3B9A21D7272217550071CE60 /* HistoryViewController.swift in Sources */,
 				3BBBBC8827206BB50099B61B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
