@@ -10,8 +10,17 @@ import Firebase
 
 class WelcomeViewController: UIViewController {
     
+    @IBOutlet weak var welcomeLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        welcomeLabel.text = "Witaj \(Auth.auth().currentUser?.email ?? "")"
+        
+        navigationItem.hidesBackButton = true
+        
+        
         
     }
 
@@ -25,6 +34,13 @@ class WelcomeViewController: UIViewController {
             print("Error signing out: %@", signOutError)
         }
     }
+    
+    @IBAction func addCarPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "WelcomeToAddCar", sender: self)
+        
+    }
+    
+    
     
 }
 
