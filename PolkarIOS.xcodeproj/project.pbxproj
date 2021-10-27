@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B9A21D5272213D50071CE60 /* MenuListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9A21D4272213D50071CE60 /* MenuListController.swift */; };
 		3B9A21D7272217550071CE60 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9A21D6272217550071CE60 /* HistoryViewController.swift */; };
+		3B9A21FB2722E7370071CE60 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9A21FA2722E7370071CE60 /* User.swift */; };
+		3B9A21FD2722E83E0071CE60 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9A21FC2722E83E0071CE60 /* Car.swift */; };
+		3B9A21FF2722EF6D0071CE60 /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9A21FE2722EF6D0071CE60 /* Brand.swift */; };
+		3B9A22012722F0CD0071CE60 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9A22002722F0CD0071CE60 /* Event.swift */; };
+		3B9A22032722F1FC0071CE60 /* Mileage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9A22022722F1FC0071CE60 /* Mileage.swift */; };
 		3BBBBC8627206BB50099B61B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBBBC8527206BB50099B61B /* AppDelegate.swift */; };
 		3BBBBC8827206BB50099B61B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBBBC8727206BB50099B61B /* SceneDelegate.swift */; };
 		3BBBBC8A27206BB50099B61B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBBBC8927206BB50099B61B /* WelcomeViewController.swift */; };
@@ -23,8 +27,12 @@
 
 /* Begin PBXFileReference section */
 		30F52062499427EA454A0D4F /* Pods_PolkarIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PolkarIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B9A21D4272213D50071CE60 /* MenuListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListController.swift; sourceTree = "<group>"; };
 		3B9A21D6272217550071CE60 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		3B9A21FA2722E7370071CE60 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3B9A21FC2722E83E0071CE60 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		3B9A21FE2722EF6D0071CE60 /* Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
+		3B9A22002722F0CD0071CE60 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		3B9A22022722F1FC0071CE60 /* Mileage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mileage.swift; sourceTree = "<group>"; };
 		3BBBBC8227206BB50099B61B /* PolkarIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PolkarIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BBBBC8527206BB50099B61B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BBBBC8727206BB50099B61B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,7 +100,6 @@
 				3BBBBC8927206BB50099B61B /* WelcomeViewController.swift */,
 				3BF4E2AB2720735100C2F06A /* LoginViewController.swift */,
 				3BF4E2AD272073B800C2F06A /* RegisterViewController.swift */,
-				3B9A21D4272213D50071CE60 /* MenuListController.swift */,
 				3B9A21D6272217550071CE60 /* HistoryViewController.swift */,
 			);
 			path = Controllers;
@@ -109,6 +116,11 @@
 		3BF4E2AA2720733600C2F06A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3B9A21FA2722E7370071CE60 /* User.swift */,
+				3B9A21FC2722E83E0071CE60 /* Car.swift */,
+				3B9A21FE2722EF6D0071CE60 /* Brand.swift */,
+				3B9A22002722F0CD0071CE60 /* Event.swift */,
+				3B9A22022722F1FC0071CE60 /* Mileage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -247,10 +259,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BF4E2AC2720735100C2F06A /* LoginViewController.swift in Sources */,
+				3B9A22032722F1FC0071CE60 /* Mileage.swift in Sources */,
 				3BF4E2AE272073B800C2F06A /* RegisterViewController.swift in Sources */,
+				3B9A21FF2722EF6D0071CE60 /* Brand.swift in Sources */,
+				3B9A21FD2722E83E0071CE60 /* Car.swift in Sources */,
+				3B9A22012722F0CD0071CE60 /* Event.swift in Sources */,
 				3BBBBC8A27206BB50099B61B /* WelcomeViewController.swift in Sources */,
 				3BBBBC8627206BB50099B61B /* AppDelegate.swift in Sources */,
-				3B9A21D5272213D50071CE60 /* MenuListController.swift in Sources */,
+				3B9A21FB2722E7370071CE60 /* User.swift in Sources */,
 				3B9A21D7272217550071CE60 /* HistoryViewController.swift in Sources */,
 				3BBBBC8827206BB50099B61B /* SceneDelegate.swift in Sources */,
 			);
