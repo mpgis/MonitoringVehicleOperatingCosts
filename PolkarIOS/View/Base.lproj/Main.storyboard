@@ -511,21 +511,6 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXi-DT-Mzx">
-                                        <rect key="frame" x="57" y="539.5" width="300" height="45"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="Apn-Gz-gK8"/>
-                                        </constraints>
-                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="ZAREJESTRUJ" cornerStyle="capsule">
-                                            <backgroundConfiguration key="background" image="loginButton"/>
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="registerPressed:" destination="3tG-dI-9fI" eventType="touchUpInside" id="HYR-xX-Otc"/>
-                                        </connections>
-                                    </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TiT-Zk-k9d">
                                         <rect key="frame" x="88" y="819" width="238" height="35"/>
                                         <subviews>
@@ -554,21 +539,48 @@
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nazwa" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TcJ-nL-Cob">
+                                        <rect key="frame" x="57" y="529.5" width="300" height="45"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="ALw-cz-kfs"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXi-DT-Mzx">
+                                        <rect key="frame" x="57" y="619.5" width="300" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="Apn-Gz-gK8"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="ZAREJESTRUJ" cornerStyle="capsule">
+                                            <backgroundConfiguration key="background" image="loginButton"/>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="registerPressed:" destination="3tG-dI-9fI" eventType="touchUpInside" id="HYR-xX-Otc"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="LxN-74-VmK"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="LxN-74-VmK" firstAttribute="trailing" secondItem="TcJ-nL-Cob" secondAttribute="trailing" constant="57" id="1nU-Dq-NlU"/>
+                                    <constraint firstItem="TcJ-nL-Cob" firstAttribute="leading" secondItem="LxN-74-VmK" secondAttribute="leading" constant="57" id="1pB-pG-KsB"/>
                                     <constraint firstItem="KXi-DT-Mzx" firstAttribute="leading" secondItem="LxN-74-VmK" secondAttribute="leading" constant="57" id="2Du-8H-Hlh"/>
                                     <constraint firstItem="LxN-74-VmK" firstAttribute="trailing" secondItem="VKK-5y-GNr" secondAttribute="trailing" constant="57" id="7IF-LE-xjS"/>
                                     <constraint firstItem="TiT-Zk-k9d" firstAttribute="leading" secondItem="LxN-74-VmK" secondAttribute="leading" constant="88" id="B2N-7c-YQR"/>
                                     <constraint firstItem="LxN-74-VmK" firstAttribute="trailing" secondItem="JXJ-nd-gEL" secondAttribute="trailing" constant="57" id="Ci1-pe-L8n"/>
                                     <constraint firstItem="LxN-74-VmK" firstAttribute="trailing" secondItem="KXi-DT-Mzx" secondAttribute="trailing" constant="57" id="E3a-aJ-Yrg"/>
                                     <constraint firstItem="gPK-VJ-REr" firstAttribute="top" secondItem="gvP-zh-N7Y" secondAttribute="bottom" constant="45" id="KxH-5o-tqZ"/>
+                                    <constraint firstItem="KXi-DT-Mzx" firstAttribute="top" secondItem="TcJ-nL-Cob" secondAttribute="bottom" constant="45" id="MgH-PQ-oI3"/>
                                     <constraint firstItem="gvP-zh-N7Y" firstAttribute="top" secondItem="LxN-74-VmK" secondAttribute="top" constant="8" id="NCf-UE-4qG"/>
                                     <constraint firstItem="JXJ-nd-gEL" firstAttribute="leading" secondItem="LxN-74-VmK" secondAttribute="leading" constant="57" id="NOs-di-I6q"/>
                                     <constraint firstItem="JXJ-nd-gEL" firstAttribute="top" secondItem="gPK-VJ-REr" secondAttribute="bottom" constant="35" id="SZz-b1-RkV"/>
                                     <constraint firstItem="LxN-74-VmK" firstAttribute="trailing" secondItem="TiT-Zk-k9d" secondAttribute="trailing" constant="88" id="Slh-0j-wzh"/>
-                                    <constraint firstItem="KXi-DT-Mzx" firstAttribute="top" secondItem="VKK-5y-GNr" secondAttribute="bottom" constant="45" id="Ys1-Ks-ctm"/>
                                     <constraint firstItem="LxN-74-VmK" firstAttribute="trailing" secondItem="gvP-zh-N7Y" secondAttribute="trailing" constant="82" id="ZU3-2g-f1O"/>
                                     <constraint firstItem="gPK-VJ-REr" firstAttribute="leading" secondItem="LxN-74-VmK" secondAttribute="leading" constant="102" id="gTw-Lv-q7A"/>
                                     <constraint firstItem="VKK-5y-GNr" firstAttribute="leading" secondItem="LxN-74-VmK" secondAttribute="leading" constant="57" id="h61-i9-ONn"/>
@@ -576,6 +588,7 @@
                                     <constraint firstItem="LxN-74-VmK" firstAttribute="trailing" secondItem="gPK-VJ-REr" secondAttribute="trailing" constant="102" id="tS4-nL-GgE"/>
                                     <constraint firstItem="VKK-5y-GNr" firstAttribute="top" secondItem="JXJ-nd-gEL" secondAttribute="bottom" constant="35" id="uZK-nr-u5B"/>
                                     <constraint firstItem="gvP-zh-N7Y" firstAttribute="leading" secondItem="LxN-74-VmK" secondAttribute="leading" constant="83" id="uiU-AG-gM7"/>
+                                    <constraint firstItem="TcJ-nL-Cob" firstAttribute="top" secondItem="VKK-5y-GNr" secondAttribute="bottom" constant="35" id="wU6-TO-43W"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -587,6 +600,7 @@
                     <connections>
                         <outlet property="loginTextField" destination="JXJ-nd-gEL" id="bNx-mv-7aE"/>
                         <outlet property="passwordTextField" destination="VKK-5y-GNr" id="8t3-D9-kss"/>
+                        <outlet property="userNameTextField" destination="TcJ-nL-Cob" id="jPR-PJ-ToC"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="RegisterToWelcome" id="j1R-30-Ezj"/>
                     </connections>
                 </viewController>

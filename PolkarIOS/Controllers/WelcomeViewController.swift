@@ -12,6 +12,7 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var welcomeLabel: UILabel!
     
+    let db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +38,6 @@ class WelcomeViewController: UIViewController {
     
     @IBAction func addCarPressed(_ sender: UIButton) {
         performSegue(withIdentifier: "WelcomeToAddCar", sender: self)
-        
     }
     
     

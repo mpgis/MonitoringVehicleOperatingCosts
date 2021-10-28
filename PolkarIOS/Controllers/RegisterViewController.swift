@@ -12,6 +12,9 @@ class RegisterViewController: UIViewController {
     
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var userNameTextField: UITextField!
+    
+    let db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +28,7 @@ class RegisterViewController: UIViewController {
                 if let e = error {
                     print(e.localizedDescription)
                 } else {
-                    //Navigate to the ChatViewContorller
+                    self.addUserToDB()
                     self.performSegue(withIdentifier: "RegisterToWelcome", sender: self)
                 }
             }
@@ -34,5 +37,21 @@ class RegisterViewController: UIViewController {
     
     @IBAction func loginPressed(_ sender: UIButton) {
         navigationController?.popToRootViewController(animated: true)
+    }
+    
+    func addUserToDB() {
+        if let email = loginTextField.text,
+           let name = userNameTextField.text {
+            db.collection("users")
+                .addDocument(data: ["email": email,
+                                    "name": name,
+                                    "cars": []]) { (error) in
+                    if let e = error {
+                        print("Error while saving data to firestore \(e)")
+                    } else {
+                        print("Saved user")
+                    }
+                }
+        }
     }
 }
