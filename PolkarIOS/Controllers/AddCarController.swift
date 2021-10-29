@@ -37,21 +37,20 @@ class AddCarController: UIViewController {
            let body = bodyTextField.text,
            let insurance = insuranceTextField.text,
            let service = serviceTextField.text {
-            db.collection("cars")
-                .addDocument(data: ["brand": brand,
-                                    "model": model,
-                                    "mileage": mileage,
-                                    "fuelType": fuelType,
-                                    "engine": engine,
-                                    "body": body,
-                                    "insurance": insurance,
-                                    "service": service,
-                                    "email": Auth.auth().currentUser?.email ?? "",
-                                    "time": Date().timeIntervalSince1970]) { (error) in
+            db.collection(K.Cars.colection)
+                .addDocument(data: [K.Cars.brand: brand,
+                                    K.Cars.model: model,
+                                    K.Cars.mileage: mileage,
+                                    K.Cars.fuelType: fuelType,
+                                    K.Cars.engine: engine,
+                                    K.Cars.body: body,
+                                    K.Cars.insurance: insurance,
+                                    K.Cars.service: service,
+                                    K.Cars.emial: Auth.auth().currentUser?.email ?? "",
+                                    K.Cars.time: Date().timeIntervalSince1970]) { (error) in
                     if let e = error {
                         print("Error while saving data to firestore \(e)")
                     } else {
-                        print("Saved car")
                         self.addCarToUser()
                         self.dismiss(animated: true, completion: nil)
                     }
@@ -61,20 +60,18 @@ class AddCarController: UIViewController {
     }
     
     func addCarToUser() {
-        db.collection("cars").whereField("email", isEqualTo: Auth.auth().currentUser?.email ?? "").order(by: "time", descending: true).limit(to: 1).getDocuments() { (querySnapshot, err) in
+        db.collection(K.Cars.colection).whereField(K.Cars.emial, isEqualTo: Auth.auth().currentUser?.email ?? "").order(by: K.Cars.time, descending: true).limit(to: 1).getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
-                    
-                    self.db.collection("users").document(self.userID).getDocument { (doc, error) in
+                    self.db.collection(K.Users.colection).document(self.userID).getDocument { (doc, error) in
                         
                         if let doc = doc, doc.exists {
                             let data = doc.data()
-                            var cars = data!["cars"] as! [String]
+                            var cars = data![K.Users.cars] as! [String]
                             cars.append(document.documentID)
-                            self.db.collection("users").document(self.userID).updateData(["cars": cars])
+                            self.db.collection(K.Users.colection).document(self.userID).updateData([K.Users.cars: cars])
                         } else {
                             print("Document does not exist")
                         }
@@ -87,7 +84,7 @@ class AddCarController: UIViewController {
     func getUserID(){
         var userID: String = "Error"
         
-        db.collection("users").whereField("email", isEqualTo: Auth.auth().currentUser?.email ?? "").getDocuments() { (querySnapshot, err) in
+        db.collection(K.Users.colection).whereField(K.Users.email, isEqualTo: Auth.auth().currentUser?.email ?? "").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {

@@ -26,7 +26,7 @@ class LoginViewController: UIViewController {
                 if let e = error {
                     print(e.localizedDescription)
                 } else {
-                    self.performSegue(withIdentifier: "LoginToWelcome", sender: self)
+                    self.performSegue(withIdentifier: K.Segue.loginToWelcome, sender: self)
                 }
             }
         }

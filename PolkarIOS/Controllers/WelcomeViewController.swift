@@ -11,8 +11,10 @@ import Firebase
 class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var welcomeLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
     let db = Firestore.firestore()
+    var cars: [Car] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +22,6 @@ class WelcomeViewController: UIViewController {
         welcomeLabel.text = "Witaj \(Auth.auth().currentUser?.email ?? "")"
         
         navigationItem.hidesBackButton = true
-        
-        
-        
     }
 
     @IBAction func logOutPressed(_ sender: UIButton) {
@@ -37,12 +36,13 @@ class WelcomeViewController: UIViewController {
     }
     
     @IBAction func addCarPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "WelcomeToAddCar", sender: self)
+        performSegue(withIdentifier: K.Segue.welcomeToAddCar, sender: self)
     }
     
     
     
 }
+
 
 
 

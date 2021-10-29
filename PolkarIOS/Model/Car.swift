@@ -9,14 +9,15 @@ import Foundation
 
 struct Car {
     
-    var UID: String = ""
-    var brandID: String = ""
+    var brand: String = ""
     var model: String = ""
-    var mielageID: String = ""
+    var mielage: String = ""
     var fuelType: String = ""
     var engine: String = ""
     var body: String = ""
-    var insurance: [String] = ["", "", ""]
-    var service: [String] = ["", "", ""]
+    var insurance: String = ""
+    var service: String = ""
+    var email: String = ""
+    var time: String = ""
     
 }

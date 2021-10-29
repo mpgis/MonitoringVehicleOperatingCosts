@@ -90,6 +90,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="kkp-ts-CLo"/>
                     <connections>
+                        <outlet property="tableView" destination="Ysl-bR-bQ7" id="AHp-Aq-iNJ"/>
                         <outlet property="welcomeLabel" destination="ab2-Ab-ZSe" id="WBc-dh-J7H"/>
                         <segue destination="jWn-4o-bX2" kind="presentation" identifier="WelcomeToAddCar" id="DX1-D5-pdH"/>
                     </connections>

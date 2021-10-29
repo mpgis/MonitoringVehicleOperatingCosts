@@ -29,7 +29,7 @@ class RegisterViewController: UIViewController {
                     print(e.localizedDescription)
                 } else {
                     self.addUserToDB()
-                    self.performSegue(withIdentifier: "RegisterToWelcome", sender: self)
+                    self.performSegue(withIdentifier: K.Segue.registerToWelcome, sender: self)
                 }
             }
         }
@@ -42,10 +42,10 @@ class RegisterViewController: UIViewController {
     func addUserToDB() {
         if let email = loginTextField.text,
            let name = userNameTextField.text {
-            db.collection("users")
-                .addDocument(data: ["email": email,
-                                    "name": name,
-                                    "cars": []]) { (error) in
+            db.collection(K.Users.colection)
+                .addDocument(data: [K.Users.email: email,
+                                    K.Users.name: name,
+                                    K.Users.cars: []]) { (error) in
                     if let e = error {
                         print("Error while saving data to firestore \(e)")
                     } else {

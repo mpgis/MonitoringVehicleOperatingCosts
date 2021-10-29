@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B2DB4C2272BF073006EA193 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2DB4C1272BF072006EA193 /* Constans.swift */; };
 		3B8623FE2729EB8E00F6B352 /* AddCarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8623FD2729EB8E00F6B352 /* AddCarController.swift */; };
 		3B9A21D7272217550071CE60 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9A21D6272217550071CE60 /* HistoryViewController.swift */; };
 		3B9A21FB2722E7370071CE60 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9A21FA2722E7370071CE60 /* User.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		30F52062499427EA454A0D4F /* Pods_PolkarIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PolkarIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B2DB4C1272BF072006EA193 /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
 		3B8623FD2729EB8E00F6B352 /* AddCarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCarController.swift; sourceTree = "<group>"; };
 		3B9A21D6272217550071CE60 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		3B9A21FA2722E7370071CE60 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				3BBBBC9027206BB60099B61B /* LaunchScreen.storyboard */,
 				3BF4E2AF27207AC200C2F06A /* GoogleService-Info.plist */,
 				3BBBBC9327206BB60099B61B /* Info.plist */,
+				3B2DB4C1272BF072006EA193 /* Constans.swift */,
 			);
 			path = PolkarIOS;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				3B9A21FF2722EF6D0071CE60 /* Brand.swift in Sources */,
 				3B8623FE2729EB8E00F6B352 /* AddCarController.swift in Sources */,
 				3B9A21FD2722E83E0071CE60 /* Car.swift in Sources */,
+				3B2DB4C2272BF073006EA193 /* Constans.swift in Sources */,
 				3B9A22012722F0CD0071CE60 /* Event.swift in Sources */,
 				3BBBBC8A27206BB50099B61B /* WelcomeViewController.swift in Sources */,
 				3BBBBC8627206BB50099B61B /* AppDelegate.swift in Sources */,
