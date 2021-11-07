@@ -15,6 +15,7 @@ class WelcomeViewController: UIViewController {
     
     let db = Firestore.firestore()
     var cars: [Car] = []
+    var carUID: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,23 +23,14 @@ class WelcomeViewController: UIViewController {
         loadData()
         
         tableView.dataSource = self
+        tableView.delegate = self
+        
         welcomeLabel.text = "Witaj \(Auth.auth().currentUser?.email ?? "")"
         
         navigationItem.hidesBackButton = true
         
         tableView.rowHeight = 150.0
         tableView.register(UINib(nibName: "CarCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")
-    }
-
-    @IBAction func logOutPressed(_ sender: UIButton) {
-        
-        let firebaseAuth = Auth.auth()
-        do {
-            try firebaseAuth.signOut()
-            navigationController?.popToRootViewController(animated: true)
-        } catch let signOutError as NSError {
-            print("Error signing out: %@", signOutError)
-        }
     }
     
     @IBAction func addCarPressed(_ sender: UIButton) {
@@ -82,9 +74,16 @@ class WelcomeViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "WelcomeToCar" {
+            let destinationVC = segue.destination as! CarController
+            destinationVC.carUID = carUID
+        }
+    }
+    
 }
 
-extension WelcomeViewController: UITableViewDataSource {
+extension WelcomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cars.count
     }
@@ -98,6 +97,10 @@ extension WelcomeViewController: UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        carUID = cars[indexPath.row].UID
+        self.performSegue(withIdentifier: "WelcomeToCar", sender: self)
+    }
     
 }
 

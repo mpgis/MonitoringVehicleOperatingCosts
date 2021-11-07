@@ -91,11 +91,57 @@
                         <outlet property="tableView" destination="Ysl-bR-bQ7" id="AHp-Aq-iNJ"/>
                         <outlet property="welcomeLabel" destination="ab2-Ab-ZSe" id="WBc-dh-J7H"/>
                         <segue destination="jWn-4o-bX2" kind="presentation" identifier="WelcomeToAddCar" id="DX1-D5-pdH"/>
+                        <segue destination="Fwn-5C-ahO" kind="presentation" identifier="WelcomeToCar" id="daG-qK-dRT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="779.71014492753625" y="851.78571428571422"/>
+        </scene>
+        <!--Car Controller-->
+        <scene sceneID="9Y5-hi-YDV">
+            <objects>
+                <viewController id="Fwn-5C-ahO" customClass="CarController" customModule="PolkarIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="12J-qA-rVy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background2" translatesAutoresizingMaskIntoConstraints="NO" id="krN-EW-9jc">
+                                <rect key="frame" x="0.0" y="0.0" width="420" height="842"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topBarClear" translatesAutoresizingMaskIntoConstraints="NO" id="vBB-rw-xfm">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="p8T-z2-U1z"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHU-dd-4Rw">
+                                <rect key="frame" x="158" y="203" width="105" height="31"/>
+                                <color key="backgroundColor" red="0.27851835660000002" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Usun pojazd"/>
+                                <connections>
+                                    <action selector="deleteCarPressed:" destination="Fwn-5C-ahO" eventType="touchUpInside" id="zQP-Da-Fgp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Lef-NX-Cw7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vBB-rw-xfm" secondAttribute="trailing" id="4gy-pv-7RD"/>
+                            <constraint firstItem="vBB-rw-xfm" firstAttribute="top" secondItem="Lef-NX-Cw7" secondAttribute="top" id="5ID-z3-5gh"/>
+                            <constraint firstItem="vBB-rw-xfm" firstAttribute="leading" secondItem="12J-qA-rVy" secondAttribute="leading" id="5zD-pI-irW"/>
+                            <constraint firstItem="fHU-dd-4Rw" firstAttribute="top" secondItem="vBB-rw-xfm" secondAttribute="bottom" constant="118" id="6Cw-zB-RvH"/>
+                            <constraint firstItem="fHU-dd-4Rw" firstAttribute="leading" secondItem="Lef-NX-Cw7" secondAttribute="leading" constant="158" id="gKD-yd-Yih"/>
+                            <constraint firstItem="Lef-NX-Cw7" firstAttribute="trailing" secondItem="fHU-dd-4Rw" secondAttribute="trailing" constant="151" id="s3S-BB-qiO"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cNX-f2-isk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1634.7826086956522" y="1568.9732142857142"/>
         </scene>
         <!--Add Car Controller-->
         <scene sceneID="IaZ-4f-DkB">
@@ -366,7 +412,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2AX-Mw-y1R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1954" y="852"/>
+            <point key="canvasLocation" x="3242" y="852"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="1xP-N5-9ef">
@@ -382,7 +428,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X8x-wR-IlX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2838" y="852"/>
+            <point key="canvasLocation" x="4126" y="852"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Zeg-Gb-gvf">
@@ -398,12 +444,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iAL-Ua-xgD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3677" y="852"/>
+            <point key="canvasLocation" x="4965" y="852"/>
         </scene>
-        <!--View Controller-->
+        <!--Menu View Controller-->
         <scene sceneID="CNa-aY-2Hq">
             <objects>
-                <viewController id="ACP-3u-GiN" sceneMemberID="viewController">
+                <viewController id="ACP-3u-GiN" customClass="MenuViewController" customModule="PolkarIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Oq-7o-q0a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -433,11 +479,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cos-dY-DsJ">
-                                <rect key="frame" x="174" y="371" width="67" height="31"/>
+                                <rect key="frame" x="174" y="371" width="67" height="48"/>
                                 <color key="backgroundColor" red="0.27851835660000002" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Wyloguj"/>
                                 <connections>
+                                    <action selector="logOutPressed:" destination="ACP-3u-GiN" eventType="touchUpInside" id="geQ-CC-GKT"/>
                                     <segue destination="qGT-ZW-K0B" kind="show" id="H6J-Pd-PSf"/>
                                 </connections>
                             </button>
@@ -463,7 +510,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wUF-SQ-Lob" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2401" y="98"/>
+            <point key="canvasLocation" x="2400" y="97.767857142857139"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="q5Y-WK-qfj">
@@ -772,7 +819,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="eZu-4d-vZS"/>
-        <segue reference="j1R-30-Ezj"/>
+        <segue reference="TOM-Dx-Zfe"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
