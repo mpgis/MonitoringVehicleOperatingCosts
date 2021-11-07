@@ -21,14 +21,14 @@ class AddCarController: UIViewController {
     @IBOutlet weak var serviceTextField: UITextField!
     
     let db = Firestore.firestore()
-    var userID = " "
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getUserID()
     }
     
+    //Dodac fuelTankCpapcity
     @IBAction func addCarPressed(_ sender: UIButton) {
+        var ref: DocumentReference? = nil
         if let brand = brandTextField.text,
            let model = modelTextField.text,
            let mileage = mileageTextField.text,
@@ -37,20 +37,24 @@ class AddCarController: UIViewController {
            let body = bodyTextField.text,
            let insurance = insuranceTextField.text,
            let service = serviceTextField.text {
-            db.collection(K.Cars.colection)
+            ref = db.collection(K.Cars.colection)
                 .addDocument(data: [K.Cars.brand: brand,
                                     K.Cars.model: model,
                                     K.Cars.mileage: mileage,
                                     K.Cars.fuelType: fuelType,
+                                    K.Cars.fuelTankCapacity: "10",
                                     K.Cars.engine: engine,
                                     K.Cars.body: body,
                                     K.Cars.insurance: insurance,
                                     K.Cars.service: service,
-                                    K.Cars.emial: Auth.auth().currentUser?.email ?? "",
+                                    K.Cars.userUID: Auth.auth().currentUser?.uid ?? "",
                                     K.Cars.time: Date().timeIntervalSince1970]) { (error) in
                     if let e = error {
                         print("Error while saving data to firestore \(e)")
                     } else {
+                        let docId = ref!.documentID
+                        self.db.collection(K.Cars.colection).document(docId).updateData([K.Cars.UID : docId])
+                                                
                         self.addCarToUser()
                         self.dismiss(animated: true, completion: nil)
                     }
@@ -60,18 +64,17 @@ class AddCarController: UIViewController {
     }
     
     func addCarToUser() {
-        db.collection(K.Cars.colection).whereField(K.Cars.emial, isEqualTo: Auth.auth().currentUser?.email ?? "").order(by: K.Cars.time, descending: true).limit(to: 1).getDocuments() { (querySnapshot, err) in
+        db.collection(K.Cars.colection).whereField(K.Cars.userUID, isEqualTo: Auth.auth().currentUser?.uid ?? "").order(by: K.Cars.time, descending: true).limit(to: 1).getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
-                    self.db.collection(K.Users.colection).document(self.userID).getDocument { (doc, error) in
-                        
+                    self.db.collection(K.Users.colection).document(Auth.auth().currentUser?.uid ?? "").getDocument { (doc, error) in
                         if let doc = doc, doc.exists {
                             let data = doc.data()
                             var cars = data![K.Users.cars] as! [String]
                             cars.append(document.documentID)
-                            self.db.collection(K.Users.colection).document(self.userID).updateData([K.Users.cars: cars])
+                            self.db.collection(K.Users.colection).document(Auth.auth().currentUser?.uid ?? "").updateData([K.Users.cars: cars])
                         } else {
                             print("Document does not exist")
                         }
@@ -79,25 +82,6 @@ class AddCarController: UIViewController {
                 }
             }
         }
-    }
-    
-    func getUserID(){
-        var userID: String = "Error"
-        
-        db.collection(K.Users.colection).whereField(K.Users.email, isEqualTo: Auth.auth().currentUser?.email ?? "").getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                for document in querySnapshot!.documents {
-                    userID = document.documentID
-                    self.setUserID(id: userID)
-                }
-            }
-        }
-    }
-    
-    func setUserID(id: String) {
-        userID = id
     }
     
 }

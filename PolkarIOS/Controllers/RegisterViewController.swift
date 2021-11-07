@@ -43,15 +43,30 @@ class RegisterViewController: UIViewController {
         if let email = loginTextField.text,
            let name = userNameTextField.text {
             db.collection(K.Users.colection)
-                .addDocument(data: [K.Users.email: email,
-                                    K.Users.name: name,
-                                    K.Users.cars: []]) { (error) in
+                .document(Auth.auth().currentUser!.uid)
+                .setData([K.Users.email: email,
+                          K.Users.name: name,
+                          K.Users.cars: [],
+                          K.Users.UID: Auth.auth().currentUser!.uid]) { (error) in
                     if let e = error {
-                        print("Error while saving data to firestore \(e)")
+                        print("Error while saving user to database \(e)")
                     } else {
                         print("Saved user")
                     }
                 }
+            
+//            db.collection(K.Users.colection)
+//                .addDocument(data: [K.Users.email: email,
+//                                    K.Users.name: name,
+//                                    K.Users.cars: [],
+//                                    K.Users.UID: Auth.auth().currentUser!.uid]) { (error) in
+//                    if let e = error {
+//                        print("Error while saving data to firestore \(e)")
+//                    } else {
+//                        print("Saved user")
+//                    }
+//                }
+        
         }
     }
 }

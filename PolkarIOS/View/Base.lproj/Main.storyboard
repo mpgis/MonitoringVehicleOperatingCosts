@@ -37,20 +37,6 @@
                                     <segue destination="ACP-3u-GiN" kind="show" id="eZu-4d-vZS"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ysl-bR-bQ7">
-                                <rect key="frame" x="20" y="135" width="374" height="589"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="BmK-3f-fty">
-                                        <rect key="frame" x="0.0" y="44.5" width="374" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BmK-3f-fty" id="d31-Nu-509">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="at7-yJ-8TD">
                                 <rect key="frame" x="44" y="754" width="326" height="43"/>
                                 <constraints>
@@ -66,24 +52,36 @@
                                     <action selector="addCarPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Apg-v8-i2d"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ysl-bR-bQ7">
+                                <rect key="frame" x="47" y="128" width="320" height="596"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="LLb-m0-bGL"/>
+                                </constraints>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Ysl-bR-bQ7" firstAttribute="top" secondItem="wwr-eN-b5k" secondAttribute="bottom" constant="15" id="2G0-TG-V9z"/>
-                            <constraint firstItem="Ysl-bR-bQ7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3nG-nm-If9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="at7-yJ-8TD" secondAttribute="trailing" constant="44" id="4iM-pS-Wcb"/>
                             <constraint firstItem="wwr-eN-b5k" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Bqq-iE-GCQ"/>
                             <constraint firstItem="wwr-eN-b5k" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="E3X-xI-Xgu"/>
+                            <constraint firstItem="at7-yJ-8TD" firstAttribute="top" secondItem="Ysl-bR-bQ7" secondAttribute="bottom" constant="30" id="EHr-cF-KXn"/>
                             <constraint firstItem="at7-yJ-8TD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="Fme-HW-jhq"/>
                             <constraint firstItem="at7-yJ-8TD" firstAttribute="top" secondItem="Ysl-bR-bQ7" secondAttribute="bottom" constant="30" id="Lqw-7s-7ja"/>
+                            <constraint firstItem="Ysl-bR-bQ7" firstAttribute="top" secondItem="wwr-eN-b5k" secondAttribute="bottom" constant="8" symbolic="YES" id="MOC-16-Zkm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="at7-yJ-8TD" secondAttribute="bottom" constant="65" id="Thh-nH-VpS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ab2-Ab-ZSe" secondAttribute="trailing" constant="20" id="e3N-s6-bpd"/>
                             <constraint firstItem="25R-3o-C4A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fXH-NY-Mp3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ysl-bR-bQ7" secondAttribute="trailing" constant="47" id="fp4-jl-ufO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="25R-3o-C4A" secondAttribute="trailing" symbolic="YES" id="gzW-u4-KWz"/>
+                            <constraint firstItem="Ysl-bR-bQ7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="jIn-nu-yT5"/>
                             <constraint firstItem="ab2-Ab-ZSe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qX3-E1-SLL"/>
                             <constraint firstItem="wwr-eN-b5k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rRo-yn-ywq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ysl-bR-bQ7" secondAttribute="trailing" constant="20" id="sC9-Ai-YdD"/>
                             <constraint firstItem="25R-3o-C4A" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="76" id="spZ-2z-67v"/>
                             <constraint firstItem="ab2-Ab-ZSe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="x6z-le-1X9"/>
                         </constraints>

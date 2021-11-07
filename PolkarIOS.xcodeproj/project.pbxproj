@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3B2DB4C2272BF073006EA193 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2DB4C1272BF072006EA193 /* Constans.swift */; };
+		3B2DB4C5272BFA8B006EA193 /* CarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2DB4C3272BFA8B006EA193 /* CarCell.swift */; };
+		3B2DB4C6272BFA8B006EA193 /* CarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B2DB4C4272BFA8B006EA193 /* CarCell.xib */; };
 		3B8623FE2729EB8E00F6B352 /* AddCarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8623FD2729EB8E00F6B352 /* AddCarController.swift */; };
 		3B9A21D7272217550071CE60 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9A21D6272217550071CE60 /* HistoryViewController.swift */; };
 		3B9A21FB2722E7370071CE60 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9A21FA2722E7370071CE60 /* User.swift */; };
@@ -30,6 +32,8 @@
 /* Begin PBXFileReference section */
 		30F52062499427EA454A0D4F /* Pods_PolkarIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PolkarIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B2DB4C1272BF072006EA193 /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
+		3B2DB4C3272BFA8B006EA193 /* CarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCell.swift; sourceTree = "<group>"; };
+		3B2DB4C4272BFA8B006EA193 /* CarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarCell.xib; sourceTree = "<group>"; };
 		3B8623FD2729EB8E00F6B352 /* AddCarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCarController.swift; sourceTree = "<group>"; };
 		3B9A21D6272217550071CE60 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		3B9A21FA2722E7370071CE60 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -115,6 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				3BBBBC8B27206BB50099B61B /* Main.storyboard */,
+				3B2DB4C3272BFA8B006EA193 /* CarCell.swift */,
+				3B2DB4C4272BFA8B006EA193 /* CarCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -212,6 +218,7 @@
 				3BF4E2B027207AC200C2F06A /* GoogleService-Info.plist in Resources */,
 				3BBBBC8F27206BB60099B61B /* Assets.xcassets in Resources */,
 				3BBBBC8D27206BB50099B61B /* Main.storyboard in Resources */,
+				3B2DB4C6272BFA8B006EA193 /* CarCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +283,7 @@
 				3BBBBC8627206BB50099B61B /* AppDelegate.swift in Sources */,
 				3B9A21FB2722E7370071CE60 /* User.swift in Sources */,
 				3B9A21D7272217550071CE60 /* HistoryViewController.swift in Sources */,
+				3B2DB4C5272BFA8B006EA193 /* CarCell.swift in Sources */,
 				3BBBBC8827206BB50099B61B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,23 +15,27 @@ struct K {
     
     struct Cars {
         static let colection = "cars"
-        static let brand = "brand"
-        static let model = "model"
-        static let mileage = "mileage"
-        static let fuelType = "fuelType"
-        static let engine = "engine"
-        static let body = "body"
-        static let insurance = "insurance"
-        static let service = "service"
+        static let brand = "carBrand"
+        static let model = "carModel"
+        static let mileage = "carMileage"
+        static let fuelType = "carFuelType"
+        static let fuelTankCapacity = "carFuelTankCapacity"
+        static let engine = "carEngine"
+        static let body = "carBody"
+        static let insurance = "carInsurance"
+        static let service = "carService"
         static let emial = "email"
         static let time = "time"
+        static let UID = "UID"
+        static let userUID = "userUID"
     }
     
     struct Users {
         static let colection = "users"
-        static let email = "email"
-        static let cars = "cars"
-        static let name = "name"
+        static let email = "userEmail"
+        static let cars = "userCars"
+        static let name = "userName"
+        static let UID = "UID"
     }
     
 }
