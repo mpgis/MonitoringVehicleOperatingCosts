@@ -16,6 +16,7 @@ class WelcomeViewController: UIViewController {
     let db = Firestore.firestore()
     var cars: [Car] = []
     var carUID: String = ""
+    var car: Car?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,8 +77,9 @@ class WelcomeViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "WelcomeToCar" {
-            let destinationVC = segue.destination as! CarController
+            let destinationVC = segue.destination as! CarViewController
             destinationVC.carUID = carUID
+            destinationVC.car = car
         }
     }
     
@@ -99,6 +101,7 @@ extension WelcomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         carUID = cars[indexPath.row].UID
+        car = cars[indexPath.row]
         self.performSegue(withIdentifier: "WelcomeToCar", sender: self)
     }
     

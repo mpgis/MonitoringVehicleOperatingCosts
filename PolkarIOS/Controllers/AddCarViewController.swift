@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 
-class AddCarController: UIViewController {
+class AddCarViewController: UIViewController {
     
     @IBOutlet weak var brandTextField: UITextField!
     @IBOutlet weak var modelTextField: UITextField!
@@ -19,6 +19,7 @@ class AddCarController: UIViewController {
     @IBOutlet weak var bodyTextField: UITextField!
     @IBOutlet weak var insuranceTextField: UITextField!
     @IBOutlet weak var serviceTextField: UITextField!
+    @IBOutlet weak var fuelTankCapacityTextField: UITextField!
     
     let db = Firestore.firestore()
     
@@ -26,7 +27,6 @@ class AddCarController: UIViewController {
         super.viewDidLoad()
     }
     
-    //Dodac fuelTankCpapcity
     @IBAction func addCarPressed(_ sender: UIButton) {
         var ref: DocumentReference? = nil
         if let brand = brandTextField.text,
@@ -36,13 +36,14 @@ class AddCarController: UIViewController {
            let engine = engineTextField.text,
            let body = bodyTextField.text,
            let insurance = insuranceTextField.text,
-           let service = serviceTextField.text {
+           let service = serviceTextField.text,
+           let fuelTankCapacity = fuelTankCapacityTextField.text {
             ref = db.collection(K.Cars.colection)
                 .addDocument(data: [K.Cars.brand: brand,
                                     K.Cars.model: model,
                                     K.Cars.mileage: mileage,
                                     K.Cars.fuelType: fuelType,
-                                    K.Cars.fuelTankCapacity: "10",
+                                    K.Cars.fuelTankCapacity: fuelTankCapacity,
                                     K.Cars.engine: engine,
                                     K.Cars.body: body,
                                     K.Cars.insurance: insurance,

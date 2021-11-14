@@ -8,9 +8,10 @@
 import UIKit
 import Firebase
 
-class CarController: UIViewController {
+class CarViewController: UIViewController {
     
     var carUID: String = ""
+    var car: Car?
     let db = Firestore.firestore()
     
     override func viewDidLoad() {
@@ -26,6 +27,7 @@ class CarController: UIViewController {
             } else {
                 print("Document successfully removed!")
                 self.deleteCarInUser()
+                self.dismiss(animated: true, completion: nil)
             }
         }
     }
@@ -40,6 +42,13 @@ class CarController: UIViewController {
             } else {
                 print("Document does not exist")
             }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "CarToEdit" {
+            let destinationVC = segue.destination as! EditCarViewController
+            destinationVC.car = car
         }
     }
     
