@@ -50,6 +50,11 @@ class CarViewController: UIViewController {
             let destinationVC = segue.destination as! EditCarViewController
             destinationVC.car = car
         }
+        
+        if segue.identifier == "CarToFuel" {
+            let destinationVC = segue.destination as! FuelViewController
+            destinationVC.car = car
+        }
     }
     
 }

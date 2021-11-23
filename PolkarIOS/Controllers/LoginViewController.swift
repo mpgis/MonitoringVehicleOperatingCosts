@@ -17,6 +17,12 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        //Fast startup data
+        loginTextField.text = "kuba@wp.pl"
+        passwordTextField.text = "123456"
+        
+        
     }
     
     @IBAction func loginPressed(_ sender: UIButton) {

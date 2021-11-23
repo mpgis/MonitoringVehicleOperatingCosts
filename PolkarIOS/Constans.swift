@@ -38,4 +38,16 @@ struct K {
         static let UID = "UID"
     }
     
+    struct Fuel {
+        static let colection = "fuel"
+        static let amount = "fuelAmount"
+        static let mileage = "fuelMileage"
+        static let price = "fuelPrice"
+        static let sum = "fuelSum"
+        static let average = "fuelAverage"
+        static let fuelCarUID = "fuelCarUID"
+        static let fullTank = "fuelFullTank"
+        static let UID = "UID"
+    }
+    
 }
