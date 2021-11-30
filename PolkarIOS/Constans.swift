@@ -28,6 +28,7 @@ struct K {
         static let time = "time"
         static let UID = "UID"
         static let userUID = "userUID"
+        static let averageFuelUsage = "carAverageFuelUsage"
     }
     
     struct Users {
@@ -48,6 +49,7 @@ struct K {
         static let fuelCarUID = "fuelCarUID"
         static let fullTank = "fuelFullTank"
         static let UID = "UID"
+        static let station = "fuelStation"
     }
     
 }

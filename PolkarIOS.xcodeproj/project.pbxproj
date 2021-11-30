@@ -12,6 +12,8 @@
 		3B2DB4C6272BFA8B006EA193 /* CarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B2DB4C4272BFA8B006EA193 /* CarCell.xib */; };
 		3B3B1B6A27385FA70002340C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3B1B6927385FA70002340C /* MenuViewController.swift */; };
 		3B3B1B6C273862BE0002340C /* CarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3B1B6B273862BE0002340C /* CarViewController.swift */; };
+		3B5EEC1D275530630018F8DA /* FuelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5EEC1B275530630018F8DA /* FuelCell.swift */; };
+		3B5EEC1E275530630018F8DA /* FuelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B5EEC1C275530630018F8DA /* FuelCell.xib */; };
 		3B60B4E22741A2FD00F56CA1 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B60B4E12741A2FD00F56CA1 /* AddEventViewController.swift */; };
 		3B60B4E42741A4BB00F56CA1 /* FuelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B60B4E32741A4BB00F56CA1 /* FuelViewController.swift */; };
 		3B60B4E62741A79500F56CA1 /* EditCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B60B4E52741A79500F56CA1 /* EditCarViewController.swift */; };
@@ -42,6 +44,8 @@
 		3B2DB4C4272BFA8B006EA193 /* CarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarCell.xib; sourceTree = "<group>"; };
 		3B3B1B6927385FA70002340C /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		3B3B1B6B273862BE0002340C /* CarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarViewController.swift; sourceTree = "<group>"; };
+		3B5EEC1B275530630018F8DA /* FuelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelCell.swift; sourceTree = "<group>"; };
+		3B5EEC1C275530630018F8DA /* FuelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FuelCell.xib; sourceTree = "<group>"; };
 		3B60B4E12741A2FD00F56CA1 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 		3B60B4E32741A4BB00F56CA1 /* FuelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelViewController.swift; sourceTree = "<group>"; };
 		3B60B4E52741A79500F56CA1 /* EditCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCarViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +142,8 @@
 				3BBBBC8B27206BB50099B61B /* Main.storyboard */,
 				3B2DB4C3272BFA8B006EA193 /* CarCell.swift */,
 				3B2DB4C4272BFA8B006EA193 /* CarCell.xib */,
+				3B5EEC1B275530630018F8DA /* FuelCell.swift */,
+				3B5EEC1C275530630018F8DA /* FuelCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -235,6 +241,7 @@
 				3BBBBC9227206BB60099B61B /* LaunchScreen.storyboard in Resources */,
 				3BF4E2B027207AC200C2F06A /* GoogleService-Info.plist in Resources */,
 				3BBBBC8F27206BB60099B61B /* Assets.xcassets in Resources */,
+				3B5EEC1E275530630018F8DA /* FuelCell.xib in Resources */,
 				3BBBBC8D27206BB50099B61B /* Main.storyboard in Resources */,
 				3B2DB4C6272BFA8B006EA193 /* CarCell.xib in Resources */,
 			);
@@ -291,6 +298,7 @@
 			files = (
 				3BF4E2AC2720735100C2F06A /* LoginViewController.swift in Sources */,
 				3B60B4E62741A79500F56CA1 /* EditCarViewController.swift in Sources */,
+				3B5EEC1D275530630018F8DA /* FuelCell.swift in Sources */,
 				3B3B1B6A27385FA70002340C /* MenuViewController.swift in Sources */,
 				3B60B4E22741A2FD00F56CA1 /* AddEventViewController.swift in Sources */,
 				3B9A22032722F1FC0071CE60 /* Mileage.swift in Sources */,

@@ -49,7 +49,7 @@ class AddCarViewController: UIViewController {
                                     K.Cars.insurance: insurance,
                                     K.Cars.service: service,
                                     K.Cars.userUID: Auth.auth().currentUser?.uid ?? "",
-                                    K.Cars.time: Date().timeIntervalSince1970]) { (error) in
+                                    K.Cars.time: Date().timeIntervalSince1970.rounded()]) { (error) in
                     if let e = error {
                         print("Error while saving data to firestore \(e)")
                     } else {

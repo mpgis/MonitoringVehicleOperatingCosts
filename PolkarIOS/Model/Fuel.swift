@@ -9,11 +9,11 @@ import Foundation
 
 struct Fuel {
     var UID: String = ""
-    var amount: String = ""
-    var mileage: String = ""
-    var price: String = ""
-    var sum: String = ""
-    var average: String = ""
+    var amount: Float = 0.0
+    var mileage: Float = 0.0
+    var price: Float = 0.0
+    var sum: Float = 0.0
+    var average: Float = 0.0
     var fuelCarUID: String = ""
     var fullTank = ""
 }
