@@ -9,6 +9,7 @@ import UIKit
 
 class AddEventViewController: UIViewController {
     
+    var car: Car?
     override func viewDidLoad() {
         super.viewDidLoad()
     }

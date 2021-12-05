@@ -31,13 +31,13 @@ class AddCarViewController: UIViewController {
         var ref: DocumentReference? = nil
         if let brand = brandTextField.text,
            let model = modelTextField.text,
-           let mileage = mileageTextField.text,
+           let mileage = Float(mileageTextField.text!),
            let fuelType = fuelTypeTextField.text,
            let engine = engineTextField.text,
            let body = bodyTextField.text,
            let insurance = insuranceTextField.text,
            let service = serviceTextField.text,
-           let fuelTankCapacity = fuelTankCapacityTextField.text {
+           let fuelTankCapacity = Float(fuelTankCapacityTextField.text!) {
             ref = db.collection(K.Cars.colection)
                 .addDocument(data: [K.Cars.brand: brand,
                                     K.Cars.model: model,

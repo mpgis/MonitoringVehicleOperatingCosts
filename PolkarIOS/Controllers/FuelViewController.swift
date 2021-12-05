@@ -181,6 +181,7 @@ class FuelViewController: UIViewController {
         for tmpFuel in fuels {
             sumOfFuel += tmpFuel.amount
         }
+        sumOfFuel -= fuels[fuels.count - 1].amount
         globalAverage = sumOfFuel / (fuels[0].mileage - fuels[fuels.count - 1].mileage) * 100
         
         let carRef = db.collection(K.Cars.colection).document(car?.UID ?? "")
@@ -195,14 +196,14 @@ class FuelViewController: UIViewController {
             }
         }
         
-        if(mileage! > Float(car!.mileage)!) {
+        if(mileage! > car!.mileage) {
             carRef.updateData([
                 K.Cars.mileage: String(mileage!)
             ]) { err in
                 if let err = err {
                     print("Error updating document: \(err)")
                 } else {
-                    print("Document successfully updated")
+                    print("Mileage successfully updated")
                 }
             }
         }

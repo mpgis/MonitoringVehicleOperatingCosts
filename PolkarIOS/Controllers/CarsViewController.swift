@@ -1,22 +1,22 @@
 //
-//  ViewController.swift
+//  CarsViewController.swift
 //  PolkarIOS
 //
-//  Created by Jakub Slusarski on 20/10/2021.
+//  Created by Jakub Slusarski on 05/12/2021.
 //
 
 import UIKit
 import Firebase
 
-class WelcomeViewController: UIViewController {
+class CarsViewController: UIViewController {
     
-    @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     let db = Firestore.firestore()
     var cars: [Car] = []
     var carUID: String = ""
     var car: Car?
+    var caller: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,16 +26,8 @@ class WelcomeViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
-        welcomeLabel.text = "Witaj \(Auth.auth().currentUser?.email ?? "")"
-        
-        navigationItem.hidesBackButton = true
-        
         tableView.rowHeight = 150.0
         tableView.register(UINib(nibName: "CarCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")
-    }
-    
-    @IBAction func addCarPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: K.Segue.welcomeToAddCar, sender: self)
     }
     
     func loadData(){
@@ -76,16 +68,22 @@ class WelcomeViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "WelcomeToCar" {
-            let destinationVC = segue.destination as! CarViewController
-            destinationVC.carUID = carUID
+        if segue.identifier == "CarsToAddEvent" {
+            let destinationVC = segue.destination as! AddEventViewController
             destinationVC.car = car
+        } else if segue.identifier == "CarsToAddFuel" {
+            let destinationVC = segue.destination as! FuelViewController
+            destinationVC.car = car
+        } else if segue.identifier == "CarsToCarStat" {
+            let destinationVC = segue.destination as! CarsViewController
+            destinationVC.caller = caller
         }
+        
     }
-    
+
 }
 
-extension WelcomeViewController: UITableViewDataSource, UITableViewDelegate {
+extension CarsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cars.count
     }
@@ -102,11 +100,7 @@ extension WelcomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         carUID = cars[indexPath.row].UID
         car = cars[indexPath.row]
-        self.performSegue(withIdentifier: "WelcomeToCar", sender: self)
+        self.performSegue(withIdentifier: caller!, sender: self)
     }
     
 }
-
-
-
-

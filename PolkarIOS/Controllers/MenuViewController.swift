@@ -10,6 +10,8 @@ import Firebase
 
 class MenuViewController: UIViewController {
     
+    var caller: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -24,4 +26,33 @@ class MenuViewController: UIViewController {
         }
     }
     
+    @IBAction func yourCarsPressed(_ sender: UIButton) {
+       
+    }
+    
+    @IBAction func eventsPressed(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func addEventPressed(_ sender: UIButton) {
+        caller = "CarsToAddEvent"
+        self.performSegue(withIdentifier: "MenuToCars", sender: self)
+    }
+    
+    @IBAction func addFuelPressed(_ sender: UIButton) {
+        caller = "CarsToAddFuel"
+        self.performSegue(withIdentifier: "MenuToCars", sender: self)
+    }
+    
+    @IBAction func carStatPressed(_ sender: UIButton) {
+        caller = "CarsToCarStat"
+        self.performSegue(withIdentifier: "MenuToCars", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "MenuToCars" {
+            let destinationVC = segue.destination as! CarsViewController
+            destinationVC.caller = caller
+        }
+    }
 }

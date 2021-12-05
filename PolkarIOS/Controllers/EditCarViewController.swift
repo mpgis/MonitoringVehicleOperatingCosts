@@ -63,9 +63,9 @@ class EditCarViewController: UIViewController {
         if let car = car {
             brandTextField.text = car.brand
             modelTextField.text = car.model
-            mileageTextField.text = car.model
+            mileageTextField.text = String(car.mileage)
             fuelTypeTextField.text = car.fuelType
-            fuelTankCapacityTextField.text = car.fuelTankCapacity
+            fuelTankCapacityTextField.text = String(car.fuelTankCapacity)
             engineTextField.text = car.engine
             bodyTextField.text = car.body
             insuranceTextField.text = car.insurance

@@ -10,6 +10,7 @@
 		3B2DB4C2272BF073006EA193 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2DB4C1272BF072006EA193 /* Constans.swift */; };
 		3B2DB4C5272BFA8B006EA193 /* CarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2DB4C3272BFA8B006EA193 /* CarCell.swift */; };
 		3B2DB4C6272BFA8B006EA193 /* CarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B2DB4C4272BFA8B006EA193 /* CarCell.xib */; };
+		3B39AA9F275D1256009B86A7 /* CarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B39AA9E275D1256009B86A7 /* CarsViewController.swift */; };
 		3B3B1B6A27385FA70002340C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3B1B6927385FA70002340C /* MenuViewController.swift */; };
 		3B3B1B6C273862BE0002340C /* CarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3B1B6B273862BE0002340C /* CarViewController.swift */; };
 		3B5EEC1D275530630018F8DA /* FuelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5EEC1B275530630018F8DA /* FuelCell.swift */; };
@@ -42,6 +43,7 @@
 		3B2DB4C1272BF072006EA193 /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
 		3B2DB4C3272BFA8B006EA193 /* CarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCell.swift; sourceTree = "<group>"; };
 		3B2DB4C4272BFA8B006EA193 /* CarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarCell.xib; sourceTree = "<group>"; };
+		3B39AA9E275D1256009B86A7 /* CarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsViewController.swift; sourceTree = "<group>"; };
 		3B3B1B6927385FA70002340C /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		3B3B1B6B273862BE0002340C /* CarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarViewController.swift; sourceTree = "<group>"; };
 		3B5EEC1B275530630018F8DA /* FuelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelCell.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				3B60B4E12741A2FD00F56CA1 /* AddEventViewController.swift */,
 				3B60B4E32741A4BB00F56CA1 /* FuelViewController.swift */,
 				3B60B4E52741A79500F56CA1 /* EditCarViewController.swift */,
+				3B39AA9E275D1256009B86A7 /* CarsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				3B9A21D7272217550071CE60 /* HistoryViewController.swift in Sources */,
 				3B2DB4C5272BFA8B006EA193 /* CarCell.swift in Sources */,
 				3BBBBC8827206BB50099B61B /* SceneDelegate.swift in Sources */,
+				3B39AA9F275D1256009B86A7 /* CarsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
