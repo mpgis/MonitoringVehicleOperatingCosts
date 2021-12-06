@@ -50,6 +50,24 @@ struct K {
         static let fullTank = "fuelFullTank"
         static let UID = "UID"
         static let station = "fuelStation"
+        static let fuelType = "fuelType"
+    }
+    
+    struct Event {
+        static let colection = "events"
+        static let UID = "UID"
+        static let carUID = "eventCarUID"
+        static let date = "eventDate"
+        static let description = "eventDescription"
+        static let mileage = "eventMileage"
+        static let price = "eventPrice"
+        static let type = "eventType"
+        static let time = "time"
+        static let reminder = "eventReminder"
+        static let mileageReminder = "eventMileageReminder"
+        static let model = "eventModel"
+        static let brand = "eventBrand"
+        static let userUID = "eventUserUID"
     }
     
 }

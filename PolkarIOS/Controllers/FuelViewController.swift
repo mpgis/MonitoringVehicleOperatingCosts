@@ -29,7 +29,7 @@ class FuelViewController: UIViewController {
     
     var firstTime: Bool = true
     var stations: [String] = ["Orlen", "BP", "Shell", "CircleK", "Amic", "Moya"]
-    var station = ""
+    var station = "Orlen"
     
     var car: Car?
     let db = Firestore.firestore()
@@ -152,6 +152,7 @@ class FuelViewController: UIViewController {
            let sum = sum,
            let average = average,
            let fuelCarUID = car?.UID,
+           let fuelType = car?.fuelType,
            let fullTank = fullTank {
             ref = db.collection(K.Fuel.colection)
                 .addDocument(data: [K.Fuel.amount: amount,
@@ -161,7 +162,8 @@ class FuelViewController: UIViewController {
                                     K.Fuel.average: average,
                                     K.Fuel.fuelCarUID: String(fuelCarUID),
                                     K.Fuel.fullTank: String(fullTank),
-                                    K.Fuel.station: String(station)]) { (error) in
+                                    K.Fuel.station: String(station),
+                                    K.Fuel.fuelType: fuelType]) { (error) in
                     if let e = error {
                         print("Error while saving data to firestore \(e)")
                     } else {
@@ -198,7 +200,7 @@ class FuelViewController: UIViewController {
         
         if(mileage! > car!.mileage) {
             carRef.updateData([
-                K.Cars.mileage: String(mileage!)
+                K.Cars.mileage: Float(mileage!)
             ]) { err in
                 if let err = err {
                     print("Error updating document: \(err)")

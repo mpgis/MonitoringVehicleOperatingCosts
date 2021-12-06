@@ -49,6 +49,10 @@ class MenuViewController: UIViewController {
         self.performSegue(withIdentifier: "MenuToCars", sender: self)
     }
     
+    @IBAction func stationStatPressed(_ sender: UIButton) {
+        
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "MenuToCars" {
             let destinationVC = segue.destination as! CarsViewController

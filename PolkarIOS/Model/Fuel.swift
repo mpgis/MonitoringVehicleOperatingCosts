@@ -16,4 +16,5 @@ struct Fuel {
     var average: Float = 0.0
     var fuelCarUID: String = ""
     var fullTank = ""
+    var fuelType = ""
 }

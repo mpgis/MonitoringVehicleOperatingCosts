@@ -13,6 +13,10 @@
 		3B39AA9F275D1256009B86A7 /* CarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B39AA9E275D1256009B86A7 /* CarsViewController.swift */; };
 		3B3B1B6A27385FA70002340C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3B1B6927385FA70002340C /* MenuViewController.swift */; };
 		3B3B1B6C273862BE0002340C /* CarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3B1B6B273862BE0002340C /* CarViewController.swift */; };
+		3B584318275D2EA3000F50C8 /* FuelStationStatViewController.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B584317275D2EA3000F50C8 /* FuelStationStatViewController.swift.swift */; };
+		3B58431B275D3073000F50C8 /* StationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B584319275D3073000F50C8 /* StationCell.swift */; };
+		3B58431C275D3073000F50C8 /* StationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B58431A275D3073000F50C8 /* StationCell.xib */; };
+		3B58431E275D32C4000F50C8 /* FuelStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B58431D275D32C4000F50C8 /* FuelStation.swift */; };
 		3B5EEC1D275530630018F8DA /* FuelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5EEC1B275530630018F8DA /* FuelCell.swift */; };
 		3B5EEC1E275530630018F8DA /* FuelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B5EEC1C275530630018F8DA /* FuelCell.xib */; };
 		3B60B4E22741A2FD00F56CA1 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B60B4E12741A2FD00F56CA1 /* AddEventViewController.swift */; };
@@ -32,6 +36,8 @@
 		3BBBBC8D27206BB50099B61B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BBBBC8B27206BB50099B61B /* Main.storyboard */; };
 		3BBBBC8F27206BB60099B61B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BBBBC8E27206BB60099B61B /* Assets.xcassets */; };
 		3BBBBC9227206BB60099B61B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BBBBC9027206BB60099B61B /* LaunchScreen.storyboard */; };
+		3BC3EF43275D7EF3001F7E30 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC3EF41275D7EF3001F7E30 /* EventCell.swift */; };
+		3BC3EF44275D7EF3001F7E30 /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BC3EF42275D7EF3001F7E30 /* EventCell.xib */; };
 		3BF4E2AC2720735100C2F06A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF4E2AB2720735100C2F06A /* LoginViewController.swift */; };
 		3BF4E2AE272073B800C2F06A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF4E2AD272073B800C2F06A /* RegisterViewController.swift */; };
 		3BF4E2B027207AC200C2F06A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BF4E2AF27207AC200C2F06A /* GoogleService-Info.plist */; };
@@ -46,6 +52,10 @@
 		3B39AA9E275D1256009B86A7 /* CarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsViewController.swift; sourceTree = "<group>"; };
 		3B3B1B6927385FA70002340C /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		3B3B1B6B273862BE0002340C /* CarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarViewController.swift; sourceTree = "<group>"; };
+		3B584317275D2EA3000F50C8 /* FuelStationStatViewController.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelStationStatViewController.swift.swift; sourceTree = "<group>"; };
+		3B584319275D3073000F50C8 /* StationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCell.swift; sourceTree = "<group>"; };
+		3B58431A275D3073000F50C8 /* StationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationCell.xib; sourceTree = "<group>"; };
+		3B58431D275D32C4000F50C8 /* FuelStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelStation.swift; sourceTree = "<group>"; };
 		3B5EEC1B275530630018F8DA /* FuelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelCell.swift; sourceTree = "<group>"; };
 		3B5EEC1C275530630018F8DA /* FuelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FuelCell.xib; sourceTree = "<group>"; };
 		3B60B4E12741A2FD00F56CA1 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +77,8 @@
 		3BBBBC8E27206BB60099B61B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BBBBC9127206BB60099B61B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3BBBBC9327206BB60099B61B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BC3EF41275D7EF3001F7E30 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		3BC3EF42275D7EF3001F7E30 /* EventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCell.xib; sourceTree = "<group>"; };
 		3BF4E2AB2720735100C2F06A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3BF4E2AD272073B800C2F06A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3BF4E2AF27207AC200C2F06A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -135,6 +147,7 @@
 				3B60B4E32741A4BB00F56CA1 /* FuelViewController.swift */,
 				3B60B4E52741A79500F56CA1 /* EditCarViewController.swift */,
 				3B39AA9E275D1256009B86A7 /* CarsViewController.swift */,
+				3B584317275D2EA3000F50C8 /* FuelStationStatViewController.swift.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -147,6 +160,10 @@
 				3B2DB4C4272BFA8B006EA193 /* CarCell.xib */,
 				3B5EEC1B275530630018F8DA /* FuelCell.swift */,
 				3B5EEC1C275530630018F8DA /* FuelCell.xib */,
+				3B584319275D3073000F50C8 /* StationCell.swift */,
+				3B58431A275D3073000F50C8 /* StationCell.xib */,
+				3BC3EF41275D7EF3001F7E30 /* EventCell.swift */,
+				3BC3EF42275D7EF3001F7E30 /* EventCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -160,6 +177,7 @@
 				3B9A22002722F0CD0071CE60 /* Event.swift */,
 				3B9A22022722F1FC0071CE60 /* Mileage.swift */,
 				3BB1E0DE274C422700FD848F /* Fuel.swift */,
+				3B58431D275D32C4000F50C8 /* FuelStation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -241,11 +259,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BC3EF44275D7EF3001F7E30 /* EventCell.xib in Resources */,
 				3BBBBC9227206BB60099B61B /* LaunchScreen.storyboard in Resources */,
 				3BF4E2B027207AC200C2F06A /* GoogleService-Info.plist in Resources */,
 				3BBBBC8F27206BB60099B61B /* Assets.xcassets in Resources */,
 				3B5EEC1E275530630018F8DA /* FuelCell.xib in Resources */,
 				3BBBBC8D27206BB50099B61B /* Main.storyboard in Resources */,
+				3B58431C275D3073000F50C8 /* StationCell.xib in Resources */,
 				3B2DB4C6272BFA8B006EA193 /* CarCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,18 +324,22 @@
 				3B5EEC1D275530630018F8DA /* FuelCell.swift in Sources */,
 				3B3B1B6A27385FA70002340C /* MenuViewController.swift in Sources */,
 				3B60B4E22741A2FD00F56CA1 /* AddEventViewController.swift in Sources */,
+				3B584318275D2EA3000F50C8 /* FuelStationStatViewController.swift.swift in Sources */,
 				3B9A22032722F1FC0071CE60 /* Mileage.swift in Sources */,
 				3BB1E0DF274C422700FD848F /* Fuel.swift in Sources */,
 				3BF4E2AE272073B800C2F06A /* RegisterViewController.swift in Sources */,
+				3B58431E275D32C4000F50C8 /* FuelStation.swift in Sources */,
 				3B9A21FF2722EF6D0071CE60 /* Brand.swift in Sources */,
 				3B8623FE2729EB8E00F6B352 /* AddCarViewController.swift in Sources */,
 				3B9A21FD2722E83E0071CE60 /* Car.swift in Sources */,
 				3B60B4E42741A4BB00F56CA1 /* FuelViewController.swift in Sources */,
 				3B2DB4C2272BF073006EA193 /* Constans.swift in Sources */,
+				3B58431B275D3073000F50C8 /* StationCell.swift in Sources */,
 				3B3B1B6C273862BE0002340C /* CarViewController.swift in Sources */,
 				3B9A22012722F0CD0071CE60 /* Event.swift in Sources */,
 				3BBBBC8A27206BB50099B61B /* WelcomeViewController.swift in Sources */,
 				3BBBBC8627206BB50099B61B /* AppDelegate.swift in Sources */,
+				3BC3EF43275D7EF3001F7E30 /* EventCell.swift in Sources */,
 				3B9A21FB2722E7370071CE60 /* User.swift in Sources */,
 				3B9A21D7272217550071CE60 /* HistoryViewController.swift in Sources */,
 				3B2DB4C5272BFA8B006EA193 /* CarCell.swift in Sources */,

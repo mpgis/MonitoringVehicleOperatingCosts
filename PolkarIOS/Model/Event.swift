@@ -8,13 +8,16 @@
 import Foundation
 
 struct Event {
-    
     var UID: String = ""
-    var carID: String = ""
-    var userID: String = ""
-    var mieageID: String = ""
+    var carUID: String = ""
+    var date: String = ""
     var description: String = ""
-    var date: String = "1.1.2010"
-    
-    
+    var mileage: Float = 0.0
+    var price: Float = 0.0
+    var type: String = ""
+    var reminder: Bool = false
+    var mileageReminder: Float = 0.0
+    var model: String = ""
+    var brand: String = ""
+    var userUID: String = ""
 }

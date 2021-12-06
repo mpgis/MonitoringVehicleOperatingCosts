@@ -17,6 +17,7 @@ class WelcomeViewController: UIViewController {
     var cars: [Car] = []
     var carUID: String = ""
     var car: Car?
+    var events: [Event] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,6 +81,40 @@ class WelcomeViewController: UIViewController {
             let destinationVC = segue.destination as! CarViewController
             destinationVC.carUID = carUID
             destinationVC.car = car
+        }
+    }
+    
+    func loadEventData(){
+        db.collection(K.Event.colection).whereField(K.Event.carUID, isEqualTo: Auth.auth().currentUser?.uid ?? "").order(by: K.Event.time, descending: true).getDocuments { (querySnapshot, error) in
+            if let e = error {
+                print("There was an issue retrieving data form firestore. \(e)")
+            } else {
+                if let snapshotDocument = querySnapshot?.documents {
+                    for doc in snapshotDocument {
+                        let data = doc.data()
+                        if let UID = data[K.Event.UID] as? String,
+                           let carUID = data[K.Event.carUID] as? String,
+                           let date = data[K.Event.date] as? String,
+                           let description = data[K.Event.description] as? String,
+                           let mileage = data[K.Event.mileage] as? Float,
+                           let price = data[K.Event.price] as? Float,
+                           let type = data[K.Event.type] as? String,
+                           let reminder = data[K.Event.reminder] as? Bool,
+                           let mileageReminder = data[K.Event.mileageReminder] as? Float,
+                           let model = data[K.Event.model] as? String,
+                           let brand = data[K.Event.brand] as? String,
+                           let userUID = data[K.Event.userUID] as? String {
+                         
+                            let newEvent = Event(UID: UID, carUID: carUID, date: date, description: description, mileage: mileage, price: price, type: type, reminder: reminder, mileageReminder: mileageReminder, model: model, brand: brand, userUID: userUID)
+                            self.events.append(newEvent)
+                            
+                            DispatchQueue.main.async {
+                                self.tableView.reloadData()
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
     
