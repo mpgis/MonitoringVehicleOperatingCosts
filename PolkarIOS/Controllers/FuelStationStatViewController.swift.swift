@@ -109,15 +109,6 @@ extension FuelStationStatViewController: UITableViewDataSource, UITableViewDeleg
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Station Cell", for: indexPath) as! StationCell
         
-        //cell.carNameLabel.text = cars[indexPath.row].model
-//        cell.amountTextField.text = String(fuels[indexPath.row].amount)
-//        cell.averageTextField.text = String(fuels[indexPath.row].average)
-//        cell.sumTextField.text = String(fuels[indexPath.row].sum)
-//        if(fuels[indexPath.row].fullTank == "true"){
-//            cell.checkmarkImage.isHidden = false
-//        } else {
-//            cell.checkmarkImage.isHidden = true
-//        }
         cell.nameLabel.text = fuelStations[indexPath.row].name
         cell.petrolLabel.text = String(fuelStations[indexPath.row].pb)
         cell.dieselLabel.text = String(fuelStations[indexPath.row].on)

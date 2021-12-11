@@ -19,4 +19,5 @@ struct Car {
     var body: String = ""
     var insurance: String = ""
     var service: String = ""
+    var average: Float = 0.0
 }

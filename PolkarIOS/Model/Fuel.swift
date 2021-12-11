@@ -15,6 +15,6 @@ struct Fuel {
     var sum: Float = 0.0
     var average: Float = 0.0
     var fuelCarUID: String = ""
-    var fullTank = ""
+    var fullTank: Bool = true
     var fuelType = ""
 }

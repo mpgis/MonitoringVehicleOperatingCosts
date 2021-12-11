@@ -71,15 +71,6 @@ extension HistoryViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Event Cell", for: indexPath) as! EventCell
         
-        //cell.carNameLabel.text = cars[indexPath.row].model
-//        cell.amountTextField.text = String(fuels[indexPath.row].amount)
-//        cell.averageTextField.text = String(fuels[indexPath.row].average)
-//        cell.sumTextField.text = String(fuels[indexPath.row].sum)
-//        if(fuels[indexPath.row].fullTank == "true"){
-//            cell.checkmarkImage.isHidden = false
-//        } else {
-//            cell.checkmarkImage.isHidden = true
-//        }
         cell.nameLabel.text = events[indexPath.row].brand + " " + events[indexPath.row].model
         cell.dateLabel.text = events[indexPath.row].date
         cell.mileageLabel.text = String(events[indexPath.row].mileage)

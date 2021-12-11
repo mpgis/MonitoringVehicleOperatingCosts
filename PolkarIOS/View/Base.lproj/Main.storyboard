@@ -120,64 +120,156 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHU-dd-4Rw">
-                                <rect key="frame" x="20" y="338" width="155" height="31"/>
-                                <color key="backgroundColor" red="0.27851835660000002" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="20" y="774" width="155" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="U0q-tt-xy2"/>
                                     <constraint firstAttribute="width" constant="155" id="fU1-Fx-0SK"/>
-                                    <constraint firstAttribute="height" constant="31" id="ioL-2i-Fgo"/>
                                 </constraints>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Usun pojazd"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Usun pojazd">
+                                    <backgroundConfiguration key="background" image="loginButton"/>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="deleteCarPressed:" destination="Fwn-5C-ahO" eventType="touchUpInside" id="zQP-Da-Fgp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzK-Rh-nDa">
-                                <rect key="frame" x="239" y="338" width="155" height="31"/>
-                                <color key="backgroundColor" red="0.27851835660000002" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="239" y="774" width="155" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="eyf-UG-6lh"/>
                                     <constraint firstAttribute="width" constant="155" id="uCR-rY-qwm"/>
+                                    <constraint firstAttribute="height" constant="34" id="vji-8X-0OX"/>
                                 </constraints>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Edytuj dane pojazdu"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Edytuj dane pojazdu">
+                                    <backgroundConfiguration key="background" image="loginButton"/>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <segue destination="We0-20-Op0" kind="show" identifier="CarToEdit" id="6nR-aO-BOY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Su0-ys-1Zh">
-                                <rect key="frame" x="20" y="159" width="155" height="50"/>
-                                <color key="backgroundColor" red="0.27851835660000002" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="20" y="93" width="155" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="T4O-vp-1Ad"/>
+                                    <constraint firstAttribute="height" constant="34" id="jpb-bH-1gR"/>
                                     <constraint firstAttribute="width" constant="155" id="p9E-9j-MES"/>
                                 </constraints>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Dodaj tankowanie"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Dodaj tankowanie">
+                                    <backgroundConfiguration key="background" image="loginButton"/>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <segue destination="X2h-Hy-Xgb" kind="show" identifier="CarToFuel" id="l6F-X3-UCW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dhy-nl-oxy">
-                                <rect key="frame" x="239" y="159" width="155" height="50"/>
-                                <color key="backgroundColor" red="0.27851835660000002" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="239" y="93" width="155" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="7aA-yL-1e5"/>
                                     <constraint firstAttribute="width" constant="155" id="WHJ-qo-G0W"/>
-                                    <constraint firstAttribute="height" constant="50" id="zN9-e4-njA"/>
                                 </constraints>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Dodaj zdarzenie"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Dodaj zdarzenie">
+                                    <backgroundConfiguration key="background" image="loginButton"/>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <segue destination="doG-8f-KnL" kind="show" identifier="CarToEvent" id="yQO-yz-ENG"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTc-fk-bbz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Twoj pojazd" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTc-fk-bbz">
                                 <rect key="frame" x="20" y="20" width="374" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Spalanie:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZbO-aa-CAz">
+                                <rect key="frame" x="20" y="152" width="80" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1t-1w-TnH">
+                                <rect key="frame" x="108" y="152" width="67" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Koszt na 1000km" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIn-kX-yIn">
+                                <rect key="frame" x="20" y="181" width="80" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSe-Zt-n1H">
+                                <rect key="frame" x="108" y="192" width="67" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ubezpieczenie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urG-sV-zbR">
+                                <rect key="frame" x="183" y="152" width="115" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20-11-2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ptK-nf-kV2">
+                                <rect key="frame" x="306" y="152" width="108" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Przeglad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcR-wk-2ge">
+                                <rect key="frame" x="183" y="191" width="75" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UBN-Hv-aTt">
+                                <rect key="frame" x="20" y="310" width="374" height="175"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="AnL-Us-F6h">
+                                <rect key="frame" x="20" y="574" width="374" height="175"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ostatnie taknowania" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUj-B2-64L">
+                                <rect key="frame" x="118" y="258" width="178" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ostatnie zdarzenia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ku-Ez-zQc">
+                                <rect key="frame" x="126" y="519" width="163" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20-11-2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8L5-By-fZM">
+                                <rect key="frame" x="306" y="192" width="108" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -188,19 +280,27 @@
                             <constraint firstAttribute="trailing" secondItem="vBB-rw-xfm" secondAttribute="trailing" id="4gy-pv-7RD"/>
                             <constraint firstItem="vBB-rw-xfm" firstAttribute="top" secondItem="Lef-NX-Cw7" secondAttribute="top" id="5ID-z3-5gh"/>
                             <constraint firstItem="vBB-rw-xfm" firstAttribute="leading" secondItem="12J-qA-rVy" secondAttribute="leading" id="5zD-pI-irW"/>
+                            <constraint firstItem="fHU-dd-4Rw" firstAttribute="bottom" secondItem="Lef-NX-Cw7" secondAttribute="bottom" id="6TZ-cg-SaM"/>
                             <constraint firstItem="Lef-NX-Cw7" firstAttribute="trailing" secondItem="yzK-Rh-nDa" secondAttribute="trailing" constant="20" id="86A-cL-7VQ"/>
-                            <constraint firstItem="yzK-Rh-nDa" firstAttribute="top" secondItem="Dhy-nl-oxy" secondAttribute="bottom" constant="129" id="8gB-9B-G29"/>
+                            <constraint firstItem="yzK-Rh-nDa" firstAttribute="bottom" secondItem="Lef-NX-Cw7" secondAttribute="bottom" id="Crd-0Y-au1"/>
+                            <constraint firstItem="Su0-ys-1Zh" firstAttribute="top" secondItem="vBB-rw-xfm" secondAttribute="bottom" constant="8" symbolic="YES" id="FEh-oM-Dvo"/>
                             <constraint firstItem="Lef-NX-Cw7" firstAttribute="trailing" secondItem="sTc-fk-bbz" secondAttribute="trailing" constant="20" id="GQb-n3-C49"/>
                             <constraint firstItem="sTc-fk-bbz" firstAttribute="top" secondItem="Lef-NX-Cw7" secondAttribute="top" constant="20" id="XdT-Ay-TlA"/>
                             <constraint firstItem="fHU-dd-4Rw" firstAttribute="leading" secondItem="Lef-NX-Cw7" secondAttribute="leading" constant="20" id="hZI-Wn-SHT"/>
-                            <constraint firstItem="Su0-ys-1Zh" firstAttribute="top" secondItem="vBB-rw-xfm" secondAttribute="bottom" constant="74" id="m6E-O4-qjC"/>
                             <constraint firstItem="Lef-NX-Cw7" firstAttribute="trailing" secondItem="Dhy-nl-oxy" secondAttribute="trailing" constant="20" id="pSD-Ml-Dd7"/>
                             <constraint firstItem="Su0-ys-1Zh" firstAttribute="leading" secondItem="Lef-NX-Cw7" secondAttribute="leading" constant="20" id="rzS-lf-FYo"/>
                             <constraint firstItem="sTc-fk-bbz" firstAttribute="leading" secondItem="Lef-NX-Cw7" secondAttribute="leading" constant="20" id="tid-k8-kaw"/>
-                            <constraint firstItem="Dhy-nl-oxy" firstAttribute="top" secondItem="vBB-rw-xfm" secondAttribute="bottom" constant="74" id="vL3-AK-Tuh"/>
-                            <constraint firstItem="fHU-dd-4Rw" firstAttribute="top" secondItem="Su0-ys-1Zh" secondAttribute="bottom" constant="129" id="xXR-R5-xUl"/>
+                            <constraint firstItem="Dhy-nl-oxy" firstAttribute="top" secondItem="vBB-rw-xfm" secondAttribute="bottom" constant="8" symbolic="YES" id="vpF-15-Gq0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="averageLabel" destination="P1t-1w-TnH" id="yPZ-MY-hS7"/>
+                        <outlet property="costLabel" destination="HSe-Zt-n1H" id="eOh-vd-iQS"/>
+                        <outlet property="eventsTableView" destination="AnL-Us-F6h" id="kK2-Kg-6Fv"/>
+                        <outlet property="fuelsTableView" destination="UBN-Hv-aTt" id="Z6a-fy-hle"/>
+                        <outlet property="insuranceLabel" destination="ptK-nf-kV2" id="Vh4-A9-l1d"/>
+                        <outlet property="serviceLabel" destination="8L5-By-fZM" id="keJ-ol-fLG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cNX-f2-isk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1737,7 +1837,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="eZu-4d-vZS"/>
-        <segue reference="wzn-yx-MRX"/>
+        <segue reference="l6F-X3-UCW"/>
         <segue reference="yQO-yz-ENG"/>
         <segue reference="TOM-Dx-Zfe"/>
     </inferredMetricsTieBreakers>

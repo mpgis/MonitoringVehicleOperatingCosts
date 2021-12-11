@@ -65,7 +65,7 @@ class FuelViewController: UIViewController {
     @IBAction func addMileage(_ sender: UITextField) {
         mileage = Float(sender.text!)!
         
-        if(fuelFullTankSwitch.isOn && firstTime == false && fuels[0].fullTank == "true") {
+        if(fuelFullTankSwitch.isOn && firstTime == false && fuels[0].fullTank == true) {
             average = amount! / (mileage! - fuels[0].mileage) * 100
             fuelAverageLabel.text = String(format: "%.2f", average!) + " L/100km"
         } else if(fuelFullTankSwitch.isOn && firstTime == false){
@@ -74,7 +74,7 @@ class FuelViewController: UIViewController {
             
             var i = 0
             
-            while(fuels[i].fullTank != "true" || i > fuels.count - 1) {
+            while(fuels[i].fullTank != true || i > fuels.count - 1) {
                 tmp_mileage = fuels[i].mileage
                 tmp_amount += fuels[i].amount
                 
@@ -126,7 +126,7 @@ class FuelViewController: UIViewController {
                            let sum = data[K.Fuel.sum] as? Float,
                            let average = data[K.Fuel.average] as? Float,
                            let fuelCarUID = data[K.Fuel.fuelCarUID] as? String,
-                           let fullTank = data[K.Fuel.fullTank] as? String {
+                           let fullTank = data[K.Fuel.fullTank] as? Bool {
 
                             let newFuel = Fuel(UID: UID, amount: amount, mileage: mileage, price: price, sum: sum, average: average, fuelCarUID: fuelCarUID, fullTank: fullTank)
                             print("Tets")
@@ -161,7 +161,7 @@ class FuelViewController: UIViewController {
                                     K.Fuel.sum: sum,
                                     K.Fuel.average: average,
                                     K.Fuel.fuelCarUID: String(fuelCarUID),
-                                    K.Fuel.fullTank: String(fullTank),
+                                    K.Fuel.fullTank: fullTank,
                                     K.Fuel.station: String(station),
                                     K.Fuel.fuelType: fuelType]) { (error) in
                     if let e = error {
@@ -220,11 +220,10 @@ extension FuelViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Fuel Cell", for: indexPath) as! FuelCell
         
-        //cell.carNameLabel.text = cars[indexPath.row].model
         cell.amountTextField.text = String(fuels[indexPath.row].amount)
         cell.averageTextField.text = String(fuels[indexPath.row].average)
         cell.sumTextField.text = String(fuels[indexPath.row].sum)
-        if(fuels[indexPath.row].fullTank == "true"){
+        if(fuels[indexPath.row].fullTank == true){
             cell.checkmarkImage.isHidden = false
         } else {
             cell.checkmarkImage.isHidden = true

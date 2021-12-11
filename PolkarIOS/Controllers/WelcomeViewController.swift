@@ -17,12 +17,14 @@ class WelcomeViewController: UIViewController {
     var cars: [Car] = []
     var carUID: String = ""
     var car: Car?
-    var events: [Event] = []
-    
+    //var events: [Event] = []
+    var events: [String:Event] = [:]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         loadData()
+        loadEventData()
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -59,9 +61,10 @@ class WelcomeViewController: UIViewController {
                            let engine = data[K.Cars.engine] as? String,
                            let body = data[K.Cars.body] as? String,
                            let insurance = data[K.Cars.insurance] as? String,
-                           let service = data[K.Cars.service] as? String {
+                           let service = data[K.Cars.service] as? String,
+                           let average = data[K.Cars.averageFuelUsage] as? Float{
                             
-                            let newCar = Car(UID: UID, brand: brand, model: model, mileage: mileage, fuelType: fuelType, fuelTankCapacity: fuelTankCapacity, engine: engine, body: body, insurance: insurance, service: service)
+                            let newCar = Car(UID: UID, brand: brand, model: model, mileage: mileage, fuelType: fuelType, fuelTankCapacity: fuelTankCapacity, engine: engine, body: body, insurance: insurance, service: service, average: average)
                             
                             self.cars.append(newCar)
                             
@@ -84,8 +87,8 @@ class WelcomeViewController: UIViewController {
         }
     }
     
-    func loadEventData(){
-        db.collection(K.Event.colection).whereField(K.Event.carUID, isEqualTo: Auth.auth().currentUser?.uid ?? "").order(by: K.Event.time, descending: true).getDocuments { (querySnapshot, error) in
+    func loadEventData() {
+        db.collection(K.Event.colection).whereField(K.Event.userUID, isEqualTo: Auth.auth().currentUser?.uid ?? "").whereField(K.Event.reminder, isEqualTo: "ture").order(by: K.Event.mileageReminder, descending: true).limit(to: 1).getDocuments { (querySnapshot, error) in
             if let e = error {
                 print("There was an issue retrieving data form firestore. \(e)")
             } else {
@@ -105,8 +108,11 @@ class WelcomeViewController: UIViewController {
                            let brand = data[K.Event.brand] as? String,
                            let userUID = data[K.Event.userUID] as? String {
                          
+                            
                             let newEvent = Event(UID: UID, carUID: carUID, date: date, description: description, mileage: mileage, price: price, type: type, reminder: reminder, mileageReminder: mileageReminder, model: model, brand: brand, userUID: userUID)
-                            self.events.append(newEvent)
+                            //self.events.append(newEvent)
+                            
+                            self.events.updateValue(newEvent, forKey: carUID)
                             
                             DispatchQueue.main.async {
                                 self.tableView.reloadData()
@@ -130,6 +136,7 @@ extension WelcomeViewController: UITableViewDataSource, UITableViewDelegate {
         
         cell.carNameLabel.text = cars[indexPath.row].model
         
+        cell.carEventLabel.text = events[cars[indexPath.row].UID]?.type
         
         return cell
     }
@@ -138,6 +145,7 @@ extension WelcomeViewController: UITableViewDataSource, UITableViewDelegate {
         carUID = cars[indexPath.row].UID
         car = cars[indexPath.row]
         self.performSegue(withIdentifier: "WelcomeToCar", sender: self)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }
