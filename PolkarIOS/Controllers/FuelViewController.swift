@@ -129,7 +129,6 @@ class FuelViewController: UIViewController {
                            let fullTank = data[K.Fuel.fullTank] as? Bool {
 
                             let newFuel = Fuel(UID: UID, amount: amount, mileage: mileage, price: price, sum: sum, average: average, fuelCarUID: fuelCarUID, fullTank: fullTank)
-                            print("Tets")
                             self.fuels.append(newFuel)
                             self.firstTime = false
                             
@@ -137,7 +136,6 @@ class FuelViewController: UIViewController {
                                 self.tableView.reloadData()
                             }
                         }
-                           
                     }
                 }
             }
@@ -163,7 +161,9 @@ class FuelViewController: UIViewController {
                                     K.Fuel.fuelCarUID: String(fuelCarUID),
                                     K.Fuel.fullTank: fullTank,
                                     K.Fuel.station: String(station),
-                                    K.Fuel.fuelType: fuelType]) { (error) in
+                                    K.Fuel.fuelType: fuelType,
+                                    K.Fuel.time: Date().timeIntervalSince1970.rounded(),
+                                    K.Fuel.fuelUserUID: Auth.auth().currentUser?.uid ?? ""]) { (error) in
                     if let e = error {
                         print("Error while saving data to firestore \(e)")
                     } else {
@@ -173,7 +173,6 @@ class FuelViewController: UIViewController {
                         self.dismiss(animated: true, completion: nil)
                     }
                 }
-        
         }
     }
     

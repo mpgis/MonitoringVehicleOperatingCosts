@@ -17,4 +17,5 @@ struct Fuel {
     var fuelCarUID: String = ""
     var fullTank: Bool = true
     var fuelType = ""
+    var time: Int?
 }

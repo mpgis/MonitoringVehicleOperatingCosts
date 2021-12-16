@@ -57,7 +57,7 @@ class CarViewController: UIViewController {
     
     func loadLabels(){
         let average = car?.average
-        averageLabel.text = String(average!)
+        averageLabel.text = String(format: "%.2f", average!)
         insuranceLabel.text = car?.insurance
         serviceLabel.text = car?.service
     }
@@ -191,7 +191,7 @@ extension CarViewController: UITableViewDataSource, UITableViewDelegate {
             let cell = tableView.dequeueReusableCell(withIdentifier: "Fuel Cell", for: indexPath) as! FuelCell
             
             cell.amountTextField.text = String(fuels[indexPath.row].amount)
-            cell.averageTextField.text = String(fuels[indexPath.row].average)
+            cell.averageTextField.text = String(format: "%.2f", fuels[indexPath.row].average)
             cell.sumTextField.text = String(fuels[indexPath.row].sum)
             if(fuels[indexPath.row].fullTank == true){
                 cell.checkmarkImage.isHidden = false

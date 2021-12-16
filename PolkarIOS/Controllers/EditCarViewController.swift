@@ -55,7 +55,6 @@ class EditCarViewController: UIViewController {
                     self.dismiss(animated: true, completion: nil)
                 }
             }
-            
         }
     }
     

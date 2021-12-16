@@ -20,4 +20,5 @@ struct Event {
     var model: String = ""
     var brand: String = ""
     var userUID: String = ""
+    var time: Int?
 }

@@ -22,6 +22,7 @@
 		3B60B4E22741A2FD00F56CA1 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B60B4E12741A2FD00F56CA1 /* AddEventViewController.swift */; };
 		3B60B4E42741A4BB00F56CA1 /* FuelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B60B4E32741A4BB00F56CA1 /* FuelViewController.swift */; };
 		3B60B4E62741A79500F56CA1 /* EditCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B60B4E52741A79500F56CA1 /* EditCarViewController.swift */; };
+		3B72F5B72767B15B00E03A6F /* CarStatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B72F5B62767B15A00E03A6F /* CarStatViewController.swift */; };
 		3B8623FE2729EB8E00F6B352 /* AddCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8623FD2729EB8E00F6B352 /* AddCarViewController.swift */; };
 		3B9A21D7272217550071CE60 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9A21D6272217550071CE60 /* HistoryViewController.swift */; };
 		3B9A21FB2722E7370071CE60 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9A21FA2722E7370071CE60 /* User.swift */; };
@@ -44,6 +45,7 @@
 		3BC3EF4C27650E16001F7E30 /* ModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC3EF4B27650E16001F7E30 /* ModelViewController.swift */; };
 		3BC3EF532765108B001F7E30 /* ModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC3EF512765108B001F7E30 /* ModelCell.swift */; };
 		3BC3EF542765108B001F7E30 /* ModelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BC3EF522765108B001F7E30 /* ModelCell.xib */; };
+		3BC3EF5627678800001F7E30 /* EditEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC3EF5527678800001F7E30 /* EditEventViewController.swift */; };
 		3BF4E2AC2720735100C2F06A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF4E2AB2720735100C2F06A /* LoginViewController.swift */; };
 		3BF4E2AE272073B800C2F06A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF4E2AD272073B800C2F06A /* RegisterViewController.swift */; };
 		3BF4E2B027207AC200C2F06A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BF4E2AF27207AC200C2F06A /* GoogleService-Info.plist */; };
@@ -67,6 +69,7 @@
 		3B60B4E12741A2FD00F56CA1 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 		3B60B4E32741A4BB00F56CA1 /* FuelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelViewController.swift; sourceTree = "<group>"; };
 		3B60B4E52741A79500F56CA1 /* EditCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCarViewController.swift; sourceTree = "<group>"; };
+		3B72F5B62767B15A00E03A6F /* CarStatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarStatViewController.swift; sourceTree = "<group>"; };
 		3B8623FD2729EB8E00F6B352 /* AddCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCarViewController.swift; sourceTree = "<group>"; };
 		3B9A21D6272217550071CE60 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		3B9A21FA2722E7370071CE60 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -91,6 +94,7 @@
 		3BC3EF4B27650E16001F7E30 /* ModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelViewController.swift; sourceTree = "<group>"; };
 		3BC3EF512765108B001F7E30 /* ModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCell.swift; sourceTree = "<group>"; };
 		3BC3EF522765108B001F7E30 /* ModelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModelCell.xib; sourceTree = "<group>"; };
+		3BC3EF5527678800001F7E30 /* EditEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventViewController.swift; sourceTree = "<group>"; };
 		3BF4E2AB2720735100C2F06A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3BF4E2AD272073B800C2F06A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3BF4E2AF27207AC200C2F06A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -164,6 +168,8 @@
 				3BC3EF4727650743001F7E30 /* GlobalStatViewController.swift */,
 				3BC3EF4927650E05001F7E30 /* BrandViewController.swift */,
 				3BC3EF4B27650E16001F7E30 /* ModelViewController.swift */,
+				3BC3EF5527678800001F7E30 /* EditEventViewController.swift */,
+				3B72F5B62767B15A00E03A6F /* CarStatViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -352,6 +358,7 @@
 				3B58431E275D32C4000F50C8 /* FuelStation.swift in Sources */,
 				3B9A21FF2722EF6D0071CE60 /* Brand.swift in Sources */,
 				3B8623FE2729EB8E00F6B352 /* AddCarViewController.swift in Sources */,
+				3B72F5B72767B15B00E03A6F /* CarStatViewController.swift in Sources */,
 				3B9A21FD2722E83E0071CE60 /* Car.swift in Sources */,
 				3B60B4E42741A4BB00F56CA1 /* FuelViewController.swift in Sources */,
 				3BC3EF4627650703001F7E30 /* UserStatViewController.swift in Sources */,
@@ -369,6 +376,7 @@
 				3B2DB4C5272BFA8B006EA193 /* CarCell.swift in Sources */,
 				3BBBBC8827206BB50099B61B /* SceneDelegate.swift in Sources */,
 				3B39AA9F275D1256009B86A7 /* CarsViewController.swift in Sources */,
+				3BC3EF5627678800001F7E30 /* EditEventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

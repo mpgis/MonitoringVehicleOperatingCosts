@@ -1,28 +1,29 @@
 //
-//  UserStatViewController.swift
+//  CarStatViewController.swift
 //  PolkarIOS
 //
-//  Created by Jakub Slusarski on 11/12/2021.
+//  Created by Jakub Slusarski on 13/12/2021.
 //
 
 import UIKit
 import Firebase
 import FirebaseFirestore
 
-class UserStatViewController: UIViewController {
+class CarStatViewController: UIViewController {
     
-    @IBOutlet weak var carCountLabel: UILabel!
+    @IBOutlet weak var monthFuelLabel: UILabel!
+    @IBOutlet weak var allFuelLabel: UILabel!
+    @IBOutlet weak var averageFuelLabel: UILabel!
+    @IBOutlet weak var monthEventLabel: UILabel!
+    @IBOutlet weak var allEventLabel: UILabel!
     @IBOutlet weak var eventCountLabel: UILabel!
     @IBOutlet weak var fuelCountLabel: UILabel!
-    @IBOutlet weak var allFuelLabel: UILabel!
-    @IBOutlet weak var monthFuelLabel: UILabel!
-    @IBOutlet weak var allEventLabel: UILabel!
-    @IBOutlet weak var monthEventLabel: UILabel!
+    
+    var car: Car?
     
     let db = Firestore.firestore()
     var fuels: [Fuel] = []
     var events: [Event] = []
-    var cars: [Car] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +54,9 @@ class UserStatViewController: UIViewController {
             }
         }
         
-        carCountLabel.text = String(cars.count)
+        
+        let average = car?.average
+        averageFuelLabel.text = String(average!)
         eventCountLabel.text = String(events.count)
         fuelCountLabel.text = String(fuels.count)
         monthFuelLabel.text = String(monthFuel)
@@ -63,7 +66,7 @@ class UserStatViewController: UIViewController {
     }
     
     func loadEventData() {
-        db.collection(K.Event.colection).whereField(K.Event.userUID, isEqualTo: Auth.auth().currentUser?.uid ?? "").order(by: K.Event.mileage, descending: true).getDocuments { (querySnapshot, error) in
+        db.collection(K.Event.colection).whereField(K.Event.carUID, isEqualTo: car?.UID ?? "").order(by: K.Event.mileage, descending: true).getDocuments { (querySnapshot, error) in
             if let e = error {
                 print("There was an issue retrieving data form firestore. \(e)")
             } else {
@@ -95,7 +98,7 @@ class UserStatViewController: UIViewController {
     }
     
     func loadFuelData() {
-        db.collection(K.Fuel.colection).whereField(K.Fuel.fuelUserUID, isEqualTo: Auth.auth().currentUser?.uid ?? "").order(by: K.Fuel.mileage, descending: true).getDocuments() { (querySnapshot, error) in
+        db.collection(K.Fuel.colection).whereField(K.Fuel.fuelCarUID, isEqualTo: car?.UID ?? "").order(by: K.Fuel.mileage, descending: true).getDocuments() { (querySnapshot, error) in
             if let e = error {
                 print("There was an issue retrieving data form firestore. \(e)")
             } else {
@@ -118,39 +121,9 @@ class UserStatViewController: UIViewController {
                     }
                 }
             }
-            self.loadCarData()
-        }
-    }
-    
-    func loadCarData() {
-        db.collection(K.Cars.colection).whereField(K.Cars.userUID, isEqualTo: Auth.auth().currentUser?.uid ?? "").order(by: K.Cars.time, descending: true).getDocuments() { querySnapshot, error in
-            if let e = error {
-                print("There was an issue retrieving data form firestore. \(e)")
-            } else {
-                if let snapshotDocument = querySnapshot?.documents {
-                    for doc in snapshotDocument {
-                        let data = doc.data()
-                        if let UID = data[K.Cars.UID] as? String,
-                           let brand = data[K.Cars.brand] as? String,
-                           let model = data[K.Cars.model] as? String,
-                           let mileage = data[K.Cars.mileage] as? Float,
-                           let fuelType = data[K.Cars.fuelType] as? String,
-                           let fuelTankCapacity = data[K.Cars.fuelTankCapacity] as? Float,
-                           let engine = data[K.Cars.engine] as? String,
-                           let body = data[K.Cars.body] as? String,
-                           let insurance = data[K.Cars.insurance] as? String,
-                           let service = data[K.Cars.service] as? String,
-                           let average = data[K.Cars.averageFuelUsage] as? Float{
-                            
-                            let newCar = Car(UID: UID, brand: brand, model: model, mileage: mileage, fuelType: fuelType, fuelTankCapacity: fuelTankCapacity, engine: engine, body: body, insurance: insurance, service: service, average: average)
-                            
-                            self.cars.append(newCar)
-                        }
-                    }
-                }
-            }
             self.loadLabels()
         }
     }
+    
     
 }

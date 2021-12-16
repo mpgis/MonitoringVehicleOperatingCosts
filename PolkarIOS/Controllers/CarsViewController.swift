@@ -50,9 +50,10 @@ class CarsViewController: UIViewController {
                            let engine = data[K.Cars.engine] as? String,
                            let body = data[K.Cars.body] as? String,
                            let insurance = data[K.Cars.insurance] as? String,
-                           let service = data[K.Cars.service] as? String {
+                           let service = data[K.Cars.service] as? String,
+                           let average = data[K.Cars.averageFuelUsage] as? Float{
                             
-                            let newCar = Car(UID: UID, brand: brand, model: model, mileage: mileage, fuelType: fuelType, fuelTankCapacity: fuelTankCapacity, engine: engine, body: body, insurance: insurance, service: service)
+                            let newCar = Car(UID: UID, brand: brand, model: model, mileage: mileage, fuelType: fuelType, fuelTankCapacity: fuelTankCapacity, engine: engine, body: body, insurance: insurance, service: service, average: average)
                             
                             self.cars.append(newCar)
                             
@@ -75,10 +76,9 @@ class CarsViewController: UIViewController {
             let destinationVC = segue.destination as! FuelViewController
             destinationVC.car = car
         } else if segue.identifier == "CarsToCarStat" {
-            let destinationVC = segue.destination as! CarsViewController
-            destinationVC.caller = caller
+            let destinationVC = segue.destination as! CarStatViewController
+            destinationVC.car = car
         }
-        
     }
 
 }

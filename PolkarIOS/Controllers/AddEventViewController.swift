@@ -67,7 +67,6 @@ class AddEventViewController: UIViewController {
         }
         addData()
         updateMileage()
-
     }
     
     func addData(){

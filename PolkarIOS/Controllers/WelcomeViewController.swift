@@ -72,7 +72,6 @@ class WelcomeViewController: UIViewController {
                                 self.tableView.reloadData()
                             }
                         }
-                           
                     }
                 }
             }
@@ -136,8 +135,14 @@ extension WelcomeViewController: UITableViewDataSource, UITableViewDelegate {
         
         cell.carNameLabel.text = cars[indexPath.row].model
         
-        cell.carEventLabel.text = events[cars[indexPath.row].UID]?.type
-        
+        //cell.carEventLabel.text = events[cars[indexPath.row].UID]?.type
+        if indexPath.row == 0 {
+            cell.carEventLabel.text = "Wymiana oleju za 1563km"
+        } else {
+            cell.carEventLabel.text = "Zaplanuj przegląd za 242 dni"
+        }
+
+        cell.carMileageLabel.text = String(cars[indexPath.row].mileage)
         return cell
     }
     

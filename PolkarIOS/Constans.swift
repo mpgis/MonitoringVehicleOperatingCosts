@@ -17,7 +17,7 @@ struct K {
         static let colection = "cars"
         static let brand = "carBrand"
         static let model = "carModel"
-        static let mileage = "carMileageID"
+        static let mileage = "carMileage"
         static let fuelType = "carFuelType"
         static let fuelTankCapacity = "carFuelTankCapacity"
         static let engine = "carEngine"
@@ -51,6 +51,8 @@ struct K {
         static let UID = "UID"
         static let station = "fuelStation"
         static let fuelType = "fuelType"
+        static let time = "time"
+        static let fuelUserUID = "fuelUserUID"
     }
     
     struct Event {

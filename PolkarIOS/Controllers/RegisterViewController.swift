@@ -18,7 +18,8 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        navigationItem.hidesBackButton = true
     }
     
     @IBAction func registerPressed(_ sender: UIButton) {
@@ -54,19 +55,6 @@ class RegisterViewController: UIViewController {
                         print("Saved user")
                     }
                 }
-            
-//            db.collection(K.Users.colection)
-//                .addDocument(data: [K.Users.email: email,
-//                                    K.Users.name: name,
-//                                    K.Users.cars: [],
-//                                    K.Users.UID: Auth.auth().currentUser!.uid]) { (error) in
-//                    if let e = error {
-//                        print("Error while saving data to firestore \(e)")
-//                    } else {
-//                        print("Saved user")
-//                    }
-//                }
-        
         }
     }
 }

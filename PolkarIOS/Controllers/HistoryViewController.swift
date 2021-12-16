@@ -15,6 +15,7 @@ class HistoryViewController: UIViewController {
     
     let db = Firestore.firestore()
     var events: [Event] = []
+    var event: Event?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +62,13 @@ class HistoryViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "EventToEditEvent" {
+            let destinationVC = segue.destination as! EditEventViewController
+            destinationVC.event = event
+        }
+    }
+    
 }
 
 extension HistoryViewController: UITableViewDataSource, UITableViewDelegate {
@@ -78,4 +86,11 @@ extension HistoryViewController: UITableViewDataSource, UITableViewDelegate {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        event = events[indexPath.row]
+        self.performSegue(withIdentifier: "EventToEditEvent", sender: self)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
 }
