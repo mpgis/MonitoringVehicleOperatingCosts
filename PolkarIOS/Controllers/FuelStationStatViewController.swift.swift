@@ -110,10 +110,10 @@ extension FuelStationStatViewController: UITableViewDataSource, UITableViewDeleg
         let cell = tableView.dequeueReusableCell(withIdentifier: "Station Cell", for: indexPath) as! StationCell
         
         cell.nameLabel.text = fuelStations[indexPath.row].name
-        cell.petrolLabel.text = String(fuelStations[indexPath.row].pb)
-        cell.dieselLabel.text = String(fuelStations[indexPath.row].on)
-        cell.lpgLabel.text = String(fuelStations[indexPath.row].lpg)
-        cell.cngLabel.text = String(fuelStations[indexPath.row].cng)
+        cell.petrolLabel.text = String(format: "%.2f", fuelStations[indexPath.row].pb)
+        cell.dieselLabel.text = String(format: "%.2f", fuelStations[indexPath.row].on)
+        cell.lpgLabel.text = String(format: "%.2f", fuelStations[indexPath.row].lpg)
+        cell.cngLabel.text = String(format: "%.2f", fuelStations[indexPath.row].cng)
         
         return cell
     }

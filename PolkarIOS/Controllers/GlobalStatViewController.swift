@@ -154,7 +154,7 @@ class GlobalStatViewController: UIViewController {
         if let max = fixMileageMax, let min = fixMileageMin {
             if max - min != 0 {
                 fixAverage = fixSum / (max - min) * 1000
-                fixLabel.text = String(fixAverage)
+                fixLabel.text = String(format: "%.2f", fixAverage)
             } else {
                 fixLabel.text = "0"
                 globalCount -= 1
@@ -167,7 +167,7 @@ class GlobalStatViewController: UIViewController {
         if let max = partsReplacementMileageMax, let min = partsReplacementMileageMin {
             if max - min != 0 {
                 partsReplacementAverage = partsReplacementSum / (max - min) * 1000
-                partsReplacementLabel.text = String(partsReplacementAverage)
+                partsReplacementLabel.text = String(format: "%.2f", partsReplacementAverage)
             } else {
                 partsReplacementLabel.text = "0"
                 globalCount -= 1
@@ -180,7 +180,7 @@ class GlobalStatViewController: UIViewController {
         if let max = oilReplacementMileageMax, let min = oilReplacementMileageMin {
             if max - min != 0 {
                 oilReplacementAverage = oilReplacementSum / (max - min) * 1000
-                oilReplacementLabel.text = String(oilReplacementAverage)
+                oilReplacementLabel.text = String(format: "%.2f", oilReplacementAverage)
             } else {
                 oilReplacementLabel.text = "0"
                 globalCount -= 1
@@ -193,7 +193,7 @@ class GlobalStatViewController: UIViewController {
         if let max = otherMileageMax, let min = otherMileageMin {
             if max - min != 0 {
                 otherAverage = otherSum / (max - min) * 1000
-                otherLabel.text = String(otherAverage)
+                otherLabel.text = String(format: "%.2f", otherAverage)
             } else {
                 otherLabel.text = "0"
                 globalCount -= 1
@@ -204,7 +204,7 @@ class GlobalStatViewController: UIViewController {
         }
         
         if globalCount != 0 {
-            costAverageLabel.text = String((fixAverage + partsReplacementAverage + oilReplacementAverage + otherAverage) / globalCount)
+            costAverageLabel.text = String(format: "%.2f",(fixAverage + partsReplacementAverage + oilReplacementAverage + otherAverage) / globalCount)
         } else {
             costAverageLabel.text = "0"
         }
@@ -246,22 +246,22 @@ class GlobalStatViewController: UIViewController {
         }
         
         if pbCount != 0 {
-            pbAverageLabel.text = String(pbSum / pbCount)
+            pbAverageLabel.text = String(format: "%.2f", (pbSum / pbCount))
         } else {
             pbAverageLabel.text = "0"
         }
         if onCount != 0 {
-            onAverageLabel.text = String(onSum / onCount)
+            onAverageLabel.text = String(format: "%.2f", (onSum / onCount))
         } else {
             onAverageLabel.text = "0"
         }
         if lpgCount != 0 {
-            lpgAverageLabel.text = String(lpgSum / lpgCount)
+            lpgAverageLabel.text = String(format: "%.2f", lpgSum / lpgCount)
         } else {
             lpgAverageLabel.text = "0"
         }
         if cngCount != 0 {
-            cngAverageLabel.text = String(cngSum / cngCount)
+            cngAverageLabel.text = String(format: "%.2f", cngSum / cngCount)
         } else {
             cngAverageLabel.text = "0"
         }

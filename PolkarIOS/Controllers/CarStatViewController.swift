@@ -59,10 +59,10 @@ class CarStatViewController: UIViewController {
         averageFuelLabel.text = String(average!)
         eventCountLabel.text = String(events.count)
         fuelCountLabel.text = String(fuels.count)
-        monthFuelLabel.text = String(monthFuel)
-        allFuelLabel.text = String(allFuel)
-        monthEventLabel.text = String(monthEvent)
-        allEventLabel.text = String(allEvent)
+        monthFuelLabel.text = String(format: "%.2f", monthFuel)
+        allFuelLabel.text = String(format: "%.2f", allFuel)
+        monthEventLabel.text = String(format: "%.2f", monthEvent)
+        allEventLabel.text = String(format: "%.2f", allEvent)
     }
     
     func loadEventData() {
