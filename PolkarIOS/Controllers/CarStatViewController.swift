@@ -56,7 +56,7 @@ class CarStatViewController: UIViewController {
         
         
         let average = car?.average
-        averageFuelLabel.text = String(average!)
+        averageFuelLabel.text = String(format: "%.2f", average!)
         eventCountLabel.text = String(events.count)
         fuelCountLabel.text = String(fuels.count)
         monthFuelLabel.text = String(format: "%.2f", monthFuel)
